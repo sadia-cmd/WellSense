@@ -1,0 +1,13 @@
+{
+  "input file": "data/3W_real_small.csv",
+  "real instances": 125,
+  "wells": 40,
+  "minutes of data": 65846,
+  "empty columns dropped": 4,
+  "invalid readings removed": 62984,
+  "frozen readings flagged": 29974,
+  "spikes removed": 251,
+  "short gaps filled": 707,
+  "symbolic fact columns": 80,
+  "database": "db/wellsense.db"
+}

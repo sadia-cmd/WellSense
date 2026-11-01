@@ -1,0 +1,3920 @@
+[
+  {
+    "id": "A-PDG_P-1",
+    "name": "Downhole pressure (PDG) above its normal level",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "p_pdg.level",
+        "is": "HIGH"
+      }
+    ],
+    "then": {
+      "fact": "PDG_P",
+      "value": "UP",
+      "cf": 0.9
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "Downhole pressure (PDG) is clearly above this well's own baseline (first hour)."
+  },
+  {
+    "id": "A-PDG_P-2",
+    "name": "Downhole pressure (PDG) rising",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "p_pdg.trend",
+        "is": "RISING"
+      },
+      {
+        "fact": "p_pdg.level",
+        "is": "LOW",
+        "not": true
+      }
+    ],
+    "then": {
+      "fact": "PDG_P",
+      "value": "UP",
+      "cf": 0.7
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "Downhole pressure (PDG) rose more than the normal 15-minute variation (and is not below normal — a low but recovering reading is not 'up')."
+  },
+  {
+    "id": "A-PDG_P-3",
+    "name": "Downhole pressure (PDG) below its normal level",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "p_pdg.level",
+        "is": "LOW"
+      }
+    ],
+    "then": {
+      "fact": "PDG_P",
+      "value": "DOWN",
+      "cf": 0.9
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "Downhole pressure (PDG) is clearly below this well's own baseline (first hour)."
+  },
+  {
+    "id": "A-PDG_P-4",
+    "name": "Downhole pressure (PDG) falling",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "p_pdg.trend",
+        "is": "FALLING"
+      },
+      {
+        "fact": "p_pdg.level",
+        "is": "HIGH",
+        "not": true
+      }
+    ],
+    "then": {
+      "fact": "PDG_P",
+      "value": "DOWN",
+      "cf": 0.7
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "Downhole pressure (PDG) fell more than the normal 15-minute variation (and is not above normal — a high but settling reading is not 'down')."
+  },
+  {
+    "id": "A-TPT_P-1",
+    "name": "Subsea tree pressure (TPT) above its normal level",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "p_tpt.level",
+        "is": "HIGH"
+      }
+    ],
+    "then": {
+      "fact": "TPT_P",
+      "value": "UP",
+      "cf": 0.9
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "Subsea tree pressure (TPT) is clearly above this well's own baseline (first hour)."
+  },
+  {
+    "id": "A-TPT_P-2",
+    "name": "Subsea tree pressure (TPT) rising",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "p_tpt.trend",
+        "is": "RISING"
+      },
+      {
+        "fact": "p_tpt.level",
+        "is": "LOW",
+        "not": true
+      }
+    ],
+    "then": {
+      "fact": "TPT_P",
+      "value": "UP",
+      "cf": 0.7
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "Subsea tree pressure (TPT) rose more than the normal 15-minute variation (and is not below normal — a low but recovering reading is not 'up')."
+  },
+  {
+    "id": "A-TPT_P-3",
+    "name": "Subsea tree pressure (TPT) below its normal level",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "p_tpt.level",
+        "is": "LOW"
+      }
+    ],
+    "then": {
+      "fact": "TPT_P",
+      "value": "DOWN",
+      "cf": 0.9
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "Subsea tree pressure (TPT) is clearly below this well's own baseline (first hour)."
+  },
+  {
+    "id": "A-TPT_P-4",
+    "name": "Subsea tree pressure (TPT) falling",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "p_tpt.trend",
+        "is": "FALLING"
+      },
+      {
+        "fact": "p_tpt.level",
+        "is": "HIGH",
+        "not": true
+      }
+    ],
+    "then": {
+      "fact": "TPT_P",
+      "value": "DOWN",
+      "cf": 0.7
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "Subsea tree pressure (TPT) fell more than the normal 15-minute variation (and is not above normal — a high but settling reading is not 'down')."
+  },
+  {
+    "id": "A-CKP_P-1",
+    "name": "Pressure upstream of production choke above its normal level",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "p_mon_ckp.level",
+        "is": "HIGH"
+      }
+    ],
+    "then": {
+      "fact": "CKP_P",
+      "value": "UP",
+      "cf": 0.9
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "Pressure upstream of production choke is clearly above this well's own baseline (first hour)."
+  },
+  {
+    "id": "A-CKP_P-2",
+    "name": "Pressure upstream of production choke rising",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "p_mon_ckp.trend",
+        "is": "RISING"
+      },
+      {
+        "fact": "p_mon_ckp.level",
+        "is": "LOW",
+        "not": true
+      }
+    ],
+    "then": {
+      "fact": "CKP_P",
+      "value": "UP",
+      "cf": 0.7
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "Pressure upstream of production choke rose more than the normal 15-minute variation (and is not below normal — a low but recovering reading is not 'up')."
+  },
+  {
+    "id": "A-CKP_P-3",
+    "name": "Pressure upstream of production choke below its normal level",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "p_mon_ckp.level",
+        "is": "LOW"
+      }
+    ],
+    "then": {
+      "fact": "CKP_P",
+      "value": "DOWN",
+      "cf": 0.9
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "Pressure upstream of production choke is clearly below this well's own baseline (first hour)."
+  },
+  {
+    "id": "A-CKP_P-4",
+    "name": "Pressure upstream of production choke falling",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "p_mon_ckp.trend",
+        "is": "FALLING"
+      },
+      {
+        "fact": "p_mon_ckp.level",
+        "is": "HIGH",
+        "not": true
+      }
+    ],
+    "then": {
+      "fact": "CKP_P",
+      "value": "DOWN",
+      "cf": 0.7
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "Pressure upstream of production choke fell more than the normal 15-minute variation (and is not above normal — a high but settling reading is not 'down')."
+  },
+  {
+    "id": "A-TPT_T-1",
+    "name": "Subsea tree temperature (TPT) above its normal level",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "t_tpt.level",
+        "is": "HIGH"
+      }
+    ],
+    "then": {
+      "fact": "TPT_T",
+      "value": "UP",
+      "cf": 0.9
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "Subsea tree temperature (TPT) is clearly above this well's own baseline (first hour)."
+  },
+  {
+    "id": "A-TPT_T-2",
+    "name": "Subsea tree temperature (TPT) rising",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "t_tpt.trend",
+        "is": "RISING"
+      },
+      {
+        "fact": "t_tpt.level",
+        "is": "LOW",
+        "not": true
+      }
+    ],
+    "then": {
+      "fact": "TPT_T",
+      "value": "UP",
+      "cf": 0.7
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "Subsea tree temperature (TPT) rose more than the normal 15-minute variation (and is not below normal — a low but recovering reading is not 'up')."
+  },
+  {
+    "id": "A-TPT_T-3",
+    "name": "Subsea tree temperature (TPT) below its normal level",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "t_tpt.level",
+        "is": "LOW"
+      }
+    ],
+    "then": {
+      "fact": "TPT_T",
+      "value": "DOWN",
+      "cf": 0.9
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "Subsea tree temperature (TPT) is clearly below this well's own baseline (first hour)."
+  },
+  {
+    "id": "A-TPT_T-4",
+    "name": "Subsea tree temperature (TPT) falling",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "t_tpt.trend",
+        "is": "FALLING"
+      },
+      {
+        "fact": "t_tpt.level",
+        "is": "HIGH",
+        "not": true
+      }
+    ],
+    "then": {
+      "fact": "TPT_T",
+      "value": "DOWN",
+      "cf": 0.7
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "Subsea tree temperature (TPT) fell more than the normal 15-minute variation (and is not above normal — a high but settling reading is not 'down')."
+  },
+  {
+    "id": "A-CKP_T-1",
+    "name": "Temperature downstream of production choke above its normal level",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "t_jus_ckp.level",
+        "is": "HIGH"
+      }
+    ],
+    "then": {
+      "fact": "CKP_T",
+      "value": "UP",
+      "cf": 0.9
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "Temperature downstream of production choke is clearly above this well's own baseline (first hour)."
+  },
+  {
+    "id": "A-CKP_T-2",
+    "name": "Temperature downstream of production choke rising",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "t_jus_ckp.trend",
+        "is": "RISING"
+      },
+      {
+        "fact": "t_jus_ckp.level",
+        "is": "LOW",
+        "not": true
+      }
+    ],
+    "then": {
+      "fact": "CKP_T",
+      "value": "UP",
+      "cf": 0.7
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "Temperature downstream of production choke rose more than the normal 15-minute variation (and is not below normal — a low but recovering reading is not 'up')."
+  },
+  {
+    "id": "A-CKP_T-3",
+    "name": "Temperature downstream of production choke below its normal level",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "t_jus_ckp.level",
+        "is": "LOW"
+      }
+    ],
+    "then": {
+      "fact": "CKP_T",
+      "value": "DOWN",
+      "cf": 0.9
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "Temperature downstream of production choke is clearly below this well's own baseline (first hour)."
+  },
+  {
+    "id": "A-CKP_T-4",
+    "name": "Temperature downstream of production choke falling",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "t_jus_ckp.trend",
+        "is": "FALLING"
+      },
+      {
+        "fact": "t_jus_ckp.level",
+        "is": "HIGH",
+        "not": true
+      }
+    ],
+    "then": {
+      "fact": "CKP_T",
+      "value": "DOWN",
+      "cf": 0.7
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "Temperature downstream of production choke fell more than the normal 15-minute variation (and is not above normal — a high but settling reading is not 'down')."
+  },
+  {
+    "id": "A-PDG_T-1",
+    "name": "Downhole temperature (PDG) above its normal level",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "t_pdg.level",
+        "is": "HIGH"
+      }
+    ],
+    "then": {
+      "fact": "PDG_T",
+      "value": "UP",
+      "cf": 0.9
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "Downhole temperature (PDG) is clearly above this well's own baseline (first hour)."
+  },
+  {
+    "id": "A-PDG_T-2",
+    "name": "Downhole temperature (PDG) rising",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "t_pdg.trend",
+        "is": "RISING"
+      },
+      {
+        "fact": "t_pdg.level",
+        "is": "LOW",
+        "not": true
+      }
+    ],
+    "then": {
+      "fact": "PDG_T",
+      "value": "UP",
+      "cf": 0.7
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "Downhole temperature (PDG) rose more than the normal 15-minute variation (and is not below normal — a low but recovering reading is not 'up')."
+  },
+  {
+    "id": "A-PDG_T-3",
+    "name": "Downhole temperature (PDG) below its normal level",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "t_pdg.level",
+        "is": "LOW"
+      }
+    ],
+    "then": {
+      "fact": "PDG_T",
+      "value": "DOWN",
+      "cf": 0.9
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "Downhole temperature (PDG) is clearly below this well's own baseline (first hour)."
+  },
+  {
+    "id": "A-PDG_T-4",
+    "name": "Downhole temperature (PDG) falling",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "t_pdg.trend",
+        "is": "FALLING"
+      },
+      {
+        "fact": "t_pdg.level",
+        "is": "HIGH",
+        "not": true
+      }
+    ],
+    "then": {
+      "fact": "PDG_T",
+      "value": "DOWN",
+      "cf": 0.7
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "Downhole temperature (PDG) fell more than the normal 15-minute variation (and is not above normal — a high but settling reading is not 'down')."
+  },
+  {
+    "id": "A-ANN_P-1",
+    "name": "Annulus pressure above its normal level",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "p_anular.level",
+        "is": "HIGH"
+      }
+    ],
+    "then": {
+      "fact": "ANN_P",
+      "value": "UP",
+      "cf": 0.9
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "Annulus pressure is clearly above this well's own baseline (first hour)."
+  },
+  {
+    "id": "A-ANN_P-2",
+    "name": "Annulus pressure rising",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "p_anular.trend",
+        "is": "RISING"
+      },
+      {
+        "fact": "p_anular.level",
+        "is": "LOW",
+        "not": true
+      }
+    ],
+    "then": {
+      "fact": "ANN_P",
+      "value": "UP",
+      "cf": 0.7
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "Annulus pressure rose more than the normal 15-minute variation (and is not below normal — a low but recovering reading is not 'up')."
+  },
+  {
+    "id": "A-ANN_P-3",
+    "name": "Annulus pressure below its normal level",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "p_anular.level",
+        "is": "LOW"
+      }
+    ],
+    "then": {
+      "fact": "ANN_P",
+      "value": "DOWN",
+      "cf": 0.9
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "Annulus pressure is clearly below this well's own baseline (first hour)."
+  },
+  {
+    "id": "A-ANN_P-4",
+    "name": "Annulus pressure falling",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "p_anular.trend",
+        "is": "FALLING"
+      },
+      {
+        "fact": "p_anular.level",
+        "is": "HIGH",
+        "not": true
+      }
+    ],
+    "then": {
+      "fact": "ANN_P",
+      "value": "DOWN",
+      "cf": 0.7
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "Annulus pressure fell more than the normal 15-minute variation (and is not above normal — a high but settling reading is not 'down')."
+  },
+  {
+    "id": "A-GL_P-1",
+    "name": "Gas-lift pressure downstream of GLCK above its normal level",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "p_jus_ckgl.level",
+        "is": "HIGH"
+      }
+    ],
+    "then": {
+      "fact": "GL_P",
+      "value": "UP",
+      "cf": 0.9
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "Gas-lift pressure downstream of GLCK is clearly above this well's own baseline (first hour)."
+  },
+  {
+    "id": "A-GL_P-2",
+    "name": "Gas-lift pressure downstream of GLCK rising",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "p_jus_ckgl.trend",
+        "is": "RISING"
+      },
+      {
+        "fact": "p_jus_ckgl.level",
+        "is": "LOW",
+        "not": true
+      }
+    ],
+    "then": {
+      "fact": "GL_P",
+      "value": "UP",
+      "cf": 0.7
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "Gas-lift pressure downstream of GLCK rose more than the normal 15-minute variation (and is not below normal — a low but recovering reading is not 'up')."
+  },
+  {
+    "id": "A-GL_P-3",
+    "name": "Gas-lift pressure downstream of GLCK below its normal level",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "p_jus_ckgl.level",
+        "is": "LOW"
+      }
+    ],
+    "then": {
+      "fact": "GL_P",
+      "value": "DOWN",
+      "cf": 0.9
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "Gas-lift pressure downstream of GLCK is clearly below this well's own baseline (first hour)."
+  },
+  {
+    "id": "A-GL_P-4",
+    "name": "Gas-lift pressure downstream of GLCK falling",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "p_jus_ckgl.trend",
+        "is": "FALLING"
+      },
+      {
+        "fact": "p_jus_ckgl.level",
+        "is": "HIGH",
+        "not": true
+      }
+    ],
+    "then": {
+      "fact": "GL_P",
+      "value": "DOWN",
+      "cf": 0.7
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "Gas-lift pressure downstream of GLCK fell more than the normal 15-minute variation (and is not above normal — a high but settling reading is not 'down')."
+  },
+  {
+    "id": "A-GL_FLOW-1",
+    "name": "Gas-lift flow above its normal level",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "qgl.level",
+        "is": "HIGH"
+      }
+    ],
+    "then": {
+      "fact": "GL_FLOW",
+      "value": "UP",
+      "cf": 0.9
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "Gas-lift flow is clearly above this well's own baseline (first hour)."
+  },
+  {
+    "id": "A-GL_FLOW-2",
+    "name": "Gas-lift flow rising",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "qgl.trend",
+        "is": "RISING"
+      },
+      {
+        "fact": "qgl.level",
+        "is": "LOW",
+        "not": true
+      }
+    ],
+    "then": {
+      "fact": "GL_FLOW",
+      "value": "UP",
+      "cf": 0.7
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "Gas-lift flow rose more than the normal 15-minute variation (and is not below normal — a low but recovering reading is not 'up')."
+  },
+  {
+    "id": "A-GL_FLOW-3",
+    "name": "Gas-lift flow below its normal level",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "qgl.level",
+        "is": "LOW"
+      }
+    ],
+    "then": {
+      "fact": "GL_FLOW",
+      "value": "DOWN",
+      "cf": 0.9
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "Gas-lift flow is clearly below this well's own baseline (first hour)."
+  },
+  {
+    "id": "A-GL_FLOW-4",
+    "name": "Gas-lift flow falling",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "qgl.trend",
+        "is": "FALLING"
+      },
+      {
+        "fact": "qgl.level",
+        "is": "HIGH",
+        "not": true
+      }
+    ],
+    "then": {
+      "fact": "GL_FLOW",
+      "value": "DOWN",
+      "cf": 0.7
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "Gas-lift flow fell more than the normal 15-minute variation (and is not above normal — a high but settling reading is not 'down')."
+  },
+  {
+    "id": "A-TPT_CYCLE-L",
+    "name": "Large repeated swings in p_tpt",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "p_tpt.cycle",
+        "is": "LARGE"
+      }
+    ],
+    "then": {
+      "fact": "TPT_CYCLE",
+      "value": "LARGE",
+      "cf": 0.9
+    },
+    "sources": [
+      "VARGAS2025",
+      "DATA_DEV"
+    ],
+    "explanation": "p_tpt went up and down repeatedly in the last 2 hours with a swing above the 'large' size (10 bar for main pressures)."
+  },
+  {
+    "id": "A-TPT_CYCLE-S",
+    "name": "Small repeated swings in p_tpt",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "p_tpt.cycle",
+        "is": "SMALL"
+      }
+    ],
+    "then": {
+      "fact": "TPT_CYCLE",
+      "value": "SMALL",
+      "cf": 0.8
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "p_tpt went up and down repeatedly in the last 2 hours, but with a small swing."
+  },
+  {
+    "id": "A-CKP_CYCLE-L",
+    "name": "Large repeated swings in p_mon_ckp",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "p_mon_ckp.cycle",
+        "is": "LARGE"
+      }
+    ],
+    "then": {
+      "fact": "CKP_CYCLE",
+      "value": "LARGE",
+      "cf": 0.9
+    },
+    "sources": [
+      "VARGAS2025",
+      "DATA_DEV"
+    ],
+    "explanation": "p_mon_ckp went up and down repeatedly in the last 2 hours with a swing above the 'large' size (10 bar for main pressures)."
+  },
+  {
+    "id": "A-CKP_CYCLE-S",
+    "name": "Small repeated swings in p_mon_ckp",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "p_mon_ckp.cycle",
+        "is": "SMALL"
+      }
+    ],
+    "then": {
+      "fact": "CKP_CYCLE",
+      "value": "SMALL",
+      "cf": 0.8
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "p_mon_ckp went up and down repeatedly in the last 2 hours, but with a small swing."
+  },
+  {
+    "id": "A-PDG_CYCLE-L",
+    "name": "Large repeated swings in p_pdg",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "p_pdg.cycle",
+        "is": "LARGE"
+      }
+    ],
+    "then": {
+      "fact": "PDG_CYCLE",
+      "value": "LARGE",
+      "cf": 0.9
+    },
+    "sources": [
+      "VARGAS2025",
+      "DATA_DEV"
+    ],
+    "explanation": "p_pdg went up and down repeatedly in the last 2 hours with a swing above the 'large' size (10 bar for main pressures)."
+  },
+  {
+    "id": "A-PDG_CYCLE-S",
+    "name": "Small repeated swings in p_pdg",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "p_pdg.cycle",
+        "is": "SMALL"
+      }
+    ],
+    "then": {
+      "fact": "PDG_CYCLE",
+      "value": "SMALL",
+      "cf": 0.8
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "p_pdg went up and down repeatedly in the last 2 hours, but with a small swing."
+  },
+  {
+    "id": "A-TPT_T_CYCLE-L",
+    "name": "Large repeated swings in t_tpt",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "t_tpt.cycle",
+        "is": "LARGE"
+      }
+    ],
+    "then": {
+      "fact": "TPT_T_CYCLE",
+      "value": "LARGE",
+      "cf": 0.9
+    },
+    "sources": [
+      "VARGAS2025",
+      "DATA_DEV"
+    ],
+    "explanation": "t_tpt went up and down repeatedly in the last 2 hours with a swing above the 'large' size (10 bar for main pressures)."
+  },
+  {
+    "id": "A-TPT_T_CYCLE-S",
+    "name": "Small repeated swings in t_tpt",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "t_tpt.cycle",
+        "is": "SMALL"
+      }
+    ],
+    "then": {
+      "fact": "TPT_T_CYCLE",
+      "value": "SMALL",
+      "cf": 0.8
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "t_tpt went up and down repeatedly in the last 2 hours, but with a small swing."
+  },
+  {
+    "id": "A-ANN_CYCLE-L",
+    "name": "Large repeated swings in p_anular",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "p_anular.cycle",
+        "is": "LARGE"
+      }
+    ],
+    "then": {
+      "fact": "ANN_CYCLE",
+      "value": "LARGE",
+      "cf": 0.9
+    },
+    "sources": [
+      "VARGAS2025",
+      "DATA_DEV"
+    ],
+    "explanation": "p_anular went up and down repeatedly in the last 2 hours with a swing above the 'large' size (10 bar for main pressures)."
+  },
+  {
+    "id": "A-ANN_CYCLE-S",
+    "name": "Small repeated swings in p_anular",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "p_anular.cycle",
+        "is": "SMALL"
+      }
+    ],
+    "then": {
+      "fact": "ANN_CYCLE",
+      "value": "SMALL",
+      "cf": 0.8
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "p_anular went up and down repeatedly in the last 2 hours, but with a small swing."
+  },
+  {
+    "id": "A-GL_CYCLE-L",
+    "name": "Large repeated swings in p_jus_ckgl",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "p_jus_ckgl.cycle",
+        "is": "LARGE"
+      }
+    ],
+    "then": {
+      "fact": "GL_CYCLE",
+      "value": "LARGE",
+      "cf": 0.9
+    },
+    "sources": [
+      "VARGAS2025",
+      "DATA_DEV"
+    ],
+    "explanation": "p_jus_ckgl went up and down repeatedly in the last 2 hours with a swing above the 'large' size (10 bar for main pressures)."
+  },
+  {
+    "id": "A-GL_CYCLE-S",
+    "name": "Small repeated swings in p_jus_ckgl",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "p_jus_ckgl.cycle",
+        "is": "SMALL"
+      }
+    ],
+    "then": {
+      "fact": "GL_CYCLE",
+      "value": "SMALL",
+      "cf": 0.8
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "p_jus_ckgl went up and down repeatedly in the last 2 hours, but with a small swing."
+  },
+  {
+    "id": "A-CKP_P_DRIFT-U",
+    "name": "Slow upward drift of p_mon_ckp over 3 hours",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "p_mon_ckp.drift",
+        "is": "RISING"
+      }
+    ],
+    "then": {
+      "fact": "CKP_P_DRIFT",
+      "value": "UP",
+      "cf": 0.85
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "p_mon_ckp has crept up over the last 3 hours by more than normal wells ever drift."
+  },
+  {
+    "id": "A-CKP_P_DRIFT-D",
+    "name": "Slow downward drift of p_mon_ckp over 3 hours",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "p_mon_ckp.drift",
+        "is": "FALLING"
+      }
+    ],
+    "then": {
+      "fact": "CKP_P_DRIFT",
+      "value": "DOWN",
+      "cf": 0.85
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "p_mon_ckp has crept down over the last 3 hours by more than normal wells ever drift."
+  },
+  {
+    "id": "A-TPT_P_DRIFT-U",
+    "name": "Slow upward drift of p_tpt over 3 hours",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "p_tpt.drift",
+        "is": "RISING"
+      }
+    ],
+    "then": {
+      "fact": "TPT_P_DRIFT",
+      "value": "UP",
+      "cf": 0.85
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "p_tpt has crept up over the last 3 hours by more than normal wells ever drift."
+  },
+  {
+    "id": "A-TPT_P_DRIFT-D",
+    "name": "Slow downward drift of p_tpt over 3 hours",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "p_tpt.drift",
+        "is": "FALLING"
+      }
+    ],
+    "then": {
+      "fact": "TPT_P_DRIFT",
+      "value": "DOWN",
+      "cf": 0.85
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "p_tpt has crept down over the last 3 hours by more than normal wells ever drift."
+  },
+  {
+    "id": "A-CKP_T_DRIFT-U",
+    "name": "Slow upward drift of t_jus_ckp over 3 hours",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "t_jus_ckp.drift",
+        "is": "RISING"
+      }
+    ],
+    "then": {
+      "fact": "CKP_T_DRIFT",
+      "value": "UP",
+      "cf": 0.85
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "t_jus_ckp has crept up over the last 3 hours by more than normal wells ever drift."
+  },
+  {
+    "id": "A-CKP_T_DRIFT-D",
+    "name": "Slow downward drift of t_jus_ckp over 3 hours",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "t_jus_ckp.drift",
+        "is": "FALLING"
+      }
+    ],
+    "then": {
+      "fact": "CKP_T_DRIFT",
+      "value": "DOWN",
+      "cf": 0.85
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "t_jus_ckp has crept down over the last 3 hours by more than normal wells ever drift."
+  },
+  {
+    "id": "A-GL_P_DRIFT-U",
+    "name": "Slow upward drift of p_jus_ckgl over 3 hours",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "p_jus_ckgl.drift",
+        "is": "RISING"
+      }
+    ],
+    "then": {
+      "fact": "GL_P_DRIFT",
+      "value": "UP",
+      "cf": 0.85
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "p_jus_ckgl has crept up over the last 3 hours by more than normal wells ever drift."
+  },
+  {
+    "id": "A-GL_P_DRIFT-D",
+    "name": "Slow downward drift of p_jus_ckgl over 3 hours",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "p_jus_ckgl.drift",
+        "is": "FALLING"
+      }
+    ],
+    "then": {
+      "fact": "GL_P_DRIFT",
+      "value": "DOWN",
+      "cf": 0.85
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "p_jus_ckgl has crept down over the last 3 hours by more than normal wells ever drift."
+  },
+  {
+    "id": "A-CKP_JUMP-N",
+    "name": "No sudden change before the choke",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "p_mon_ckp.jump30",
+        "is": "NONE"
+      }
+    ],
+    "then": {
+      "fact": "CKP_JUMP",
+      "value": "NONE",
+      "cf": 0.8
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "No sudden P-MON-CKP change in the last 30 minutes."
+  },
+  {
+    "id": "A-TPT_JUMP-D",
+    "name": "Sudden drop of subsea pressure",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "p_tpt.jump30",
+        "in": [
+          "JUMP_DOWN",
+          "BOTH"
+        ]
+      }
+    ],
+    "then": {
+      "fact": "TPT_JUMP",
+      "value": "DOWN",
+      "cf": 0.9
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "P-TPT dropped suddenly within the last 30 minutes (fast event)."
+  },
+  {
+    "id": "A-TPT_JUMP-U",
+    "name": "Sudden rise of subsea pressure",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "p_tpt.jump30",
+        "in": [
+          "JUMP_UP",
+          "BOTH"
+        ]
+      }
+    ],
+    "then": {
+      "fact": "TPT_JUMP",
+      "value": "UP",
+      "cf": 0.9
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "P-TPT rose suddenly within the last 30 minutes (fast event)."
+  },
+  {
+    "id": "A-TPT_JUMP-N",
+    "name": "No sudden change of subsea pressure",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "p_tpt.jump30",
+        "is": "NONE"
+      }
+    ],
+    "then": {
+      "fact": "TPT_JUMP",
+      "value": "NONE",
+      "cf": 0.8
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "No sudden P-TPT change in the last 30 minutes (slow event or none)."
+  },
+  {
+    "id": "A-CHOKE-C",
+    "name": "Production choke closing",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "aber_ckp.trend",
+        "is": "CLOSING"
+      }
+    ],
+    "then": {
+      "fact": "CHOKE_OPENING",
+      "value": "CLOSING",
+      "cf": 0.95
+    },
+    "sources": [
+      "PETROBRAS3W"
+    ],
+    "explanation": "The recorded opening of the production choke decreased."
+  },
+  {
+    "id": "A-CHOKE-S",
+    "name": "Production choke opening unchanged",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "aber_ckp.trend",
+        "is": "STABLE"
+      }
+    ],
+    "then": {
+      "fact": "CHOKE_OPENING",
+      "value": "STABLE",
+      "cf": 0.9
+    },
+    "sources": [
+      "PETROBRAS3W"
+    ],
+    "explanation": "The recorded opening of the production choke has not changed."
+  },
+  {
+    "id": "A-GASLIFT",
+    "name": "Gas lift in operation",
+    "level": "symptom",
+    "salience": 90,
+    "if": [
+      {
+        "fact": "gas_lift",
+        "is": "ON"
+      }
+    ],
+    "then": {
+      "fact": "GAS_LIFT",
+      "value": "ON",
+      "cf": 1.0
+    },
+    "sources": [
+      "PETROBRAS3W"
+    ],
+    "explanation": "Gas-lift flow is above zero."
+  },
+  {
+    "id": "X-SHUTIN",
+    "name": "Well deliberately closed",
+    "level": "context",
+    "salience": 85,
+    "if": [
+      {
+        "fact": "well_state",
+        "in": [
+          "Shut-In",
+          "Closed With Diesel",
+          "Closed With Gas"
+        ]
+      }
+    ],
+    "then": {
+      "fact": "OPERATION",
+      "value": "SHUT_IN",
+      "cf": 1.0
+    },
+    "sources": [
+      "VARGAS2025"
+    ],
+    "explanation": "Petrobras state label says the well is deliberately closed, so stopped flow is expected."
+  },
+  {
+    "id": "X-RESTART",
+    "name": "Well being restarted",
+    "level": "context",
+    "salience": 85,
+    "if": [
+      {
+        "fact": "well_state",
+        "is": "Restart"
+      }
+    ],
+    "then": {
+      "fact": "OPERATION",
+      "value": "RESTART",
+      "cf": 1.0
+    },
+    "sources": [
+      "VARGAS2025"
+    ],
+    "explanation": "The well is being restarted — cold fluid and changing pressures are expected (and hydrates are more likely)."
+  },
+  {
+    "id": "X-INTERV",
+    "name": "Well intervention in progress",
+    "level": "context",
+    "salience": 85,
+    "if": [
+      {
+        "fact": "well_state",
+        "in": [
+          "Flushing Diesel",
+          "Flushing Gas",
+          "Bullheading",
+          "Depressurization"
+        ]
+      }
+    ],
+    "then": {
+      "fact": "OPERATION",
+      "value": "INTERVENTION",
+      "cf": 1.0
+    },
+    "sources": [
+      "VARGAS2025"
+    ],
+    "explanation": "An operation is changing pressures on purpose."
+  },
+  {
+    "id": "X-COVERAGE",
+    "name": "Too few trustworthy sensors to diagnose",
+    "level": "context",
+    "salience": 85,
+    "if": [
+      {
+        "fact": "DATA_COVERAGE",
+        "is": "LOW"
+      }
+    ],
+    "then": {
+      "fact": "STATUS",
+      "value": "INSUFFICIENT_DATA",
+      "cf": 1.0
+    },
+    "sources": [
+      "VARGAS2019"
+    ],
+    "explanation": "Fewer than 2 of the 8 key process sensors give trustworthy readings right now. Instead of guessing 'normal', the system reports that it cannot decide (incomplete information)."
+  },
+  {
+    "id": "V-PDG-FROZEN",
+    "name": "Downhole gauge frozen while subsea pressure changes",
+    "level": "sensor",
+    "salience": 80,
+    "if": [
+      {
+        "fact": "p_pdg.quality",
+        "is": "FROZEN"
+      },
+      {
+        "fact": "TPT_P",
+        "in": [
+          "UP",
+          "DOWN"
+        ]
+      }
+    ],
+    "then": {
+      "fact": "SENSOR_ALERT",
+      "value": "PDG_FROZEN",
+      "cf": 1.0
+    },
+    "sources": [
+      "VARGAS2019"
+    ],
+    "explanation": "P-PDG has reported exactly the same value for over an hour while the reliable TPT sensor shows a real change. The two disagree; the thesis notes PDGs commonly freeze or fail, while TPT is considered reliable, so PDG is discounted (trust 0.2)."
+  },
+  {
+    "id": "V-PDG-FAIL",
+    "name": "Downhole gauge sending invalid values",
+    "level": "sensor",
+    "salience": 80,
+    "if": [
+      {
+        "fact": "p_pdg.quality",
+        "is": "INVALID"
+      }
+    ],
+    "then": {
+      "fact": "SENSOR_ALERT",
+      "value": "PDG_FAILED",
+      "cf": 1.0
+    },
+    "sources": [
+      "VARGAS2019"
+    ],
+    "explanation": "P-PDG is sending error codes or impossible values; diagnosis must rely on TPT and choke sensors."
+  },
+  {
+    "id": "V-TPT-FROZEN",
+    "name": "Subsea transducer frozen",
+    "level": "sensor",
+    "salience": 80,
+    "if": [
+      {
+        "fact": "p_tpt.quality",
+        "is": "FROZEN"
+      }
+    ],
+    "then": {
+      "fact": "SENSOR_ALERT",
+      "value": "TPT_FROZEN",
+      "cf": 1.0
+    },
+    "sources": [
+      "VARGAS2019"
+    ],
+    "explanation": "P-TPT has reported exactly the same value for over an hour."
+  },
+  {
+    "id": "S-FLOWSTOP-1",
+    "name": "Flow stopping: subsea fluid cooling",
+    "level": "symptom",
+    "salience": 70,
+    "if": [
+      {
+        "fact": "TPT_T",
+        "is": "DOWN"
+      }
+    ],
+    "then": {
+      "fact": "FLOW",
+      "value": "STOPPING",
+      "cf": 0.7
+    },
+    "sources": [
+      "VARGAS2019",
+      "PHYSICS"
+    ],
+    "explanation": "When production stops, the fluid at the subsea tree cools toward sea temperature (the thesis notes T-TPT decay indicates production stopped)."
+  },
+  {
+    "id": "S-FLOWSTOP-2",
+    "name": "Flow stopping: choke outlet cooling",
+    "level": "symptom",
+    "salience": 70,
+    "if": [
+      {
+        "fact": "CKP_T",
+        "is": "DOWN"
+      }
+    ],
+    "then": {
+      "fact": "FLOW",
+      "value": "STOPPING",
+      "cf": 0.5
+    },
+    "sources": [
+      "PHYSICS"
+    ],
+    "explanation": "Less hot fluid passes the choke, so the temperature after it falls."
+  },
+  {
+    "id": "S-TEMPUP-1",
+    "name": "Fluid temperatures rising (TPT)",
+    "level": "symptom",
+    "salience": 70,
+    "if": [
+      {
+        "fact": "TPT_T",
+        "is": "UP"
+      }
+    ],
+    "then": {
+      "fact": "TEMPS",
+      "value": "UP",
+      "cf": 0.6
+    },
+    "sources": [
+      "VARGAS2019"
+    ],
+    "explanation": "Warmer fluid at the subsea tree."
+  },
+  {
+    "id": "S-TEMPUP-2",
+    "name": "Fluid temperatures rising (after choke)",
+    "level": "symptom",
+    "salience": 70,
+    "if": [
+      {
+        "fact": "CKP_T",
+        "is": "UP"
+      }
+    ],
+    "then": {
+      "fact": "TEMPS",
+      "value": "UP",
+      "cf": 0.6
+    },
+    "sources": [
+      "VARGAS2019"
+    ],
+    "explanation": "Warmer fluid after the production choke."
+  },
+  {
+    "id": "S-HYDCOND",
+    "name": "Hydrate-favourable conditions",
+    "level": "symptom",
+    "salience": 70,
+    "if": [
+      {
+        "fact": "TPT_P",
+        "is": "UP"
+      },
+      {
+        "fact": "TPT_T",
+        "is": "DOWN"
+      }
+    ],
+    "then": {
+      "fact": "HYDRATE_CONDITIONS",
+      "value": "YES",
+      "cf": 0.7
+    },
+    "sources": [
+      "VARGAS2019",
+      "PETROWIKI_HYD"
+    ],
+    "explanation": "Hydrates need high pressure and low temperature: pressure at the tree is up while temperature is down."
+  },
+  {
+    "id": "S-OSC-TPT_CYCLE",
+    "name": "Flow is oscillating (TPT_CYCLE large swings)",
+    "level": "symptom",
+    "salience": 70,
+    "if": [
+      {
+        "fact": "TPT_CYCLE",
+        "is": "LARGE"
+      }
+    ],
+    "then": {
+      "fact": "OSC_FLOW",
+      "value": "YES",
+      "cf": 0.9
+    },
+    "sources": [
+      "VARGAS2019",
+      "PHYSICS"
+    ],
+    "explanation": "Large repeated swings mean the flow itself is oscillating. While it oscillates, momentary ups and downs of pressure say nothing about WHERE a blockage is, so the location rules are switched off."
+  },
+  {
+    "id": "S-OSC-CKP_CYCLE",
+    "name": "Flow is oscillating (CKP_CYCLE large swings)",
+    "level": "symptom",
+    "salience": 70,
+    "if": [
+      {
+        "fact": "CKP_CYCLE",
+        "is": "LARGE"
+      }
+    ],
+    "then": {
+      "fact": "OSC_FLOW",
+      "value": "YES",
+      "cf": 0.7
+    },
+    "sources": [
+      "VARGAS2019",
+      "PHYSICS"
+    ],
+    "explanation": "Large repeated swings mean the flow itself is oscillating. While it oscillates, momentary ups and downs of pressure say nothing about WHERE a blockage is, so the location rules are switched off."
+  },
+  {
+    "id": "S-OSC-TPT_T_CYCLE",
+    "name": "Flow is oscillating (TPT_T_CYCLE large swings)",
+    "level": "symptom",
+    "salience": 70,
+    "if": [
+      {
+        "fact": "TPT_T_CYCLE",
+        "is": "LARGE"
+      }
+    ],
+    "then": {
+      "fact": "OSC_FLOW",
+      "value": "YES",
+      "cf": 0.6
+    },
+    "sources": [
+      "VARGAS2019",
+      "PHYSICS"
+    ],
+    "explanation": "Large repeated swings mean the flow itself is oscillating. While it oscillates, momentary ups and downs of pressure say nothing about WHERE a blockage is, so the location rules are switched off."
+  },
+  {
+    "id": "L-DHSV-1",
+    "name": "Restriction between downhole gauge and subsea tree",
+    "level": "location",
+    "salience": 60,
+    "if": [
+      {
+        "fact": "OSC_FLOW",
+        "is": "YES",
+        "not": true
+      },
+      {
+        "fact": "PDG_P",
+        "is": "UP"
+      },
+      {
+        "fact": "TPT_P",
+        "is": "DOWN"
+      }
+    ],
+    "then": {
+      "fact": "RESTRICTION",
+      "value": "DHSV_ZONE",
+      "cf": 0.9
+    },
+    "sources": [
+      "PHYSICS",
+      "VARGAS2025"
+    ],
+    "explanation": "Pressure rises below and falls above the DHSV: something is blocking flow between the PDG and the TPT — where the DHSV sits."
+  },
+  {
+    "id": "L-DHSV-2",
+    "name": "Restriction near DHSV (downhole gauge unavailable)",
+    "level": "location",
+    "salience": 60,
+    "if": [
+      {
+        "fact": "OSC_FLOW",
+        "is": "YES",
+        "not": true
+      },
+      {
+        "fact": "TPT_P",
+        "is": "DOWN"
+      },
+      {
+        "fact": "CKP_P",
+        "is": "DOWN"
+      },
+      {
+        "fact": "TPT_JUMP",
+        "is": "DOWN"
+      },
+      {
+        "fact": "PDG_P",
+        "is": "UP",
+        "not": true
+      }
+    ],
+    "then": {
+      "fact": "RESTRICTION",
+      "value": "DHSV_ZONE",
+      "cf": 0.6
+    },
+    "sources": [
+      "PHYSICS",
+      "VARGAS2025"
+    ],
+    "explanation": "Works without the PDG: pressure dropped suddenly at the tree and before the choke, so the blockage is below the tree."
+  },
+  {
+    "id": "L-DHSV-3",
+    "name": "Restriction near DHSV (only subsea tree sensors available)",
+    "level": "location",
+    "salience": 60,
+    "if": [
+      {
+        "fact": "OSC_FLOW",
+        "is": "YES",
+        "not": true
+      },
+      {
+        "fact": "TPT_P",
+        "is": "DOWN"
+      },
+      {
+        "fact": "TPT_JUMP",
+        "is": "DOWN"
+      },
+      {
+        "fact": "FLOW",
+        "is": "STOPPING"
+      },
+      {
+        "fact": "PDG_P",
+        "is": "UP",
+        "not": true
+      },
+      {
+        "fact": "CKP_P",
+        "is": "UP",
+        "not": true
+      }
+    ],
+    "then": {
+      "fact": "RESTRICTION",
+      "value": "DHSV_ZONE",
+      "cf": 0.55
+    },
+    "sources": [
+      "PHYSICS",
+      "VARGAS2019"
+    ],
+    "explanation": "Works with the subsea tree alone: pressure fell suddenly and the fluid is cooling (flow stopping), so something closed below the tree."
+  },
+  {
+    "id": "L-PL-1",
+    "name": "Restriction between subsea tree and production choke",
+    "level": "location",
+    "salience": 60,
+    "if": [
+      {
+        "fact": "OSC_FLOW",
+        "is": "YES",
+        "not": true
+      },
+      {
+        "fact": "TPT_P",
+        "is": "UP"
+      },
+      {
+        "fact": "CKP_P",
+        "is": "DOWN"
+      }
+    ],
+    "then": {
+      "fact": "RESTRICTION",
+      "value": "PRODUCTION_LINE",
+      "cf": 0.85
+    },
+    "sources": [
+      "PHYSICS",
+      "VARGAS2025"
+    ],
+    "explanation": "Pressure rises at the subsea tree but falls before the choke: the blockage is in the production line between them."
+  },
+  {
+    "id": "L-PL-2",
+    "name": "Restriction above the subsea tree (choke pressure unavailable)",
+    "level": "location",
+    "salience": 60,
+    "if": [
+      {
+        "fact": "OSC_FLOW",
+        "is": "YES",
+        "not": true
+      },
+      {
+        "fact": "PDG_P",
+        "is": "UP"
+      },
+      {
+        "fact": "TPT_P",
+        "is": "UP"
+      },
+      {
+        "fact": "CKP_P",
+        "is": "UP",
+        "not": true
+      },
+      {
+        "fact": "TPT_CYCLE",
+        "is": "LARGE",
+        "not": true
+      }
+    ],
+    "then": {
+      "fact": "RESTRICTION",
+      "value": "PRODUCTION_LINE",
+      "cf": 0.5
+    },
+    "sources": [
+      "PHYSICS"
+    ],
+    "explanation": "Pressure rises both downhole and at the tree, with no rise before the choke: the blockage is downstream of the tree."
+  },
+  {
+    "id": "L-CK-1",
+    "name": "Restriction at the production choke",
+    "level": "location",
+    "salience": 60,
+    "if": [
+      {
+        "fact": "OSC_FLOW",
+        "is": "YES",
+        "not": true
+      },
+      {
+        "fact": "TPT_P",
+        "is": "UP"
+      },
+      {
+        "fact": "CKP_P",
+        "is": "UP"
+      }
+    ],
+    "then": {
+      "fact": "RESTRICTION",
+      "value": "CHOKE",
+      "cf": 0.8
+    },
+    "sources": [
+      "PHYSICS",
+      "VARGAS2025"
+    ],
+    "explanation": "Pressure rises everywhere upstream of the choke: the blockage is at the choke itself."
+  },
+  {
+    "id": "L-CK-2",
+    "name": "Restriction at the choke (pressure up, outlet cooling)",
+    "level": "location",
+    "salience": 60,
+    "if": [
+      {
+        "fact": "OSC_FLOW",
+        "is": "YES",
+        "not": true
+      },
+      {
+        "fact": "CKP_P",
+        "is": "UP"
+      },
+      {
+        "fact": "CKP_T",
+        "is": "DOWN"
+      }
+    ],
+    "then": {
+      "fact": "RESTRICTION",
+      "value": "CHOKE",
+      "cf": 0.6
+    },
+    "sources": [
+      "PHYSICS"
+    ],
+    "explanation": "Pressure builds before the choke while less fluid passes it (outlet cools)."
+  },
+  {
+    "id": "L-GL-1",
+    "name": "Restriction in the gas-lift/service line",
+    "level": "location",
+    "salience": 60,
+    "if": [
+      {
+        "fact": "OSC_FLOW",
+        "is": "YES",
+        "not": true
+      },
+      {
+        "fact": "GL_P",
+        "is": "UP"
+      },
+      {
+        "fact": "GL_FLOW",
+        "is": "DOWN"
+      }
+    ],
+    "then": {
+      "fact": "RESTRICTION",
+      "value": "SERVICE_LINE",
+      "cf": 0.85
+    },
+    "sources": [
+      "PHYSICS"
+    ],
+    "explanation": "Gas-lift pressure rises after the gas-lift choke while the gas-lift flow falls: the service line is blocked."
+  },
+  {
+    "id": "L-GL-2",
+    "name": "Restriction in service line (annulus side)",
+    "level": "location",
+    "salience": 60,
+    "if": [
+      {
+        "fact": "OSC_FLOW",
+        "is": "YES",
+        "not": true
+      },
+      {
+        "fact": "GL_P",
+        "is": "UP"
+      },
+      {
+        "fact": "ANN_P",
+        "is": "DOWN"
+      }
+    ],
+    "then": {
+      "fact": "RESTRICTION",
+      "value": "SERVICE_LINE",
+      "cf": 0.6
+    },
+    "sources": [
+      "PHYSICS"
+    ],
+    "explanation": "Pressure rises before the blockage (gas-lift side) and falls after it (annulus)."
+  },
+  {
+    "id": "D-DHSV-1",
+    "name": "Spurious DHSV closure (restriction at DHSV + flow stopping)",
+    "level": "diagnosis",
+    "salience": 40,
+    "if": [
+      {
+        "fact": "RESTRICTION",
+        "is": "DHSV_ZONE"
+      },
+      {
+        "fact": "FLOW",
+        "is": "STOPPING"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "SPURIOUS_CLOSURE_OF_DHSV",
+      "cf": 0.85
+    },
+    "sources": [
+      "VARGAS2019",
+      "VARGAS2025"
+    ],
+    "explanation": "A blockage at the DHSV with production stopping is the signature of a spurious DHSV closure."
+  },
+  {
+    "id": "D-DHSV-2",
+    "name": "Spurious DHSV closure (restriction at DHSV)",
+    "level": "diagnosis",
+    "salience": 40,
+    "if": [
+      {
+        "fact": "RESTRICTION",
+        "is": "DHSV_ZONE"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "SPURIOUS_CLOSURE_OF_DHSV",
+      "cf": 0.6
+    },
+    "sources": [
+      "VARGAS2025"
+    ],
+    "explanation": "The pressure pattern places the blockage at the DHSV."
+  },
+  {
+    "id": "D-DHSV-N",
+    "name": "Against DHSV closure: temperatures rising",
+    "level": "diagnosis",
+    "salience": 40,
+    "if": [
+      {
+        "fact": "TEMPS",
+        "is": "UP"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "SPURIOUS_CLOSURE_OF_DHSV",
+      "cf": -0.4
+    },
+    "sources": [
+      "PHYSICS"
+    ],
+    "explanation": "A closed DHSV stops flow, which cools the fluid — rising temperatures argue against it."
+  },
+  {
+    "id": "D-BSW-1",
+    "name": "Abrupt BSW increase (surface pressure down, temperatures up)",
+    "level": "diagnosis",
+    "salience": 40,
+    "if": [
+      {
+        "fact": "OSC_FLOW",
+        "is": "YES",
+        "not": true
+      },
+      {
+        "fact": "TPT_P",
+        "is": "DOWN"
+      },
+      {
+        "fact": "TEMPS",
+        "is": "UP"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "ABRUPT_INCREASE_OF_BSW",
+      "cf": 0.7
+    },
+    "sources": [
+      "VARGAS2019"
+    ],
+    "explanation": "Thesis rule: with more water, pressures near the surface fall and temperatures rise (water carries more heat)."
+  },
+  {
+    "id": "D-BSW-2",
+    "name": "Abrupt BSW increase (deep pressure up, surface down, temperatures up)",
+    "level": "diagnosis",
+    "salience": 40,
+    "if": [
+      {
+        "fact": "OSC_FLOW",
+        "is": "YES",
+        "not": true
+      },
+      {
+        "fact": "PDG_P",
+        "is": "UP"
+      },
+      {
+        "fact": "TPT_P",
+        "is": "DOWN"
+      },
+      {
+        "fact": "TEMPS",
+        "is": "UP"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "ABRUPT_INCREASE_OF_BSW",
+      "cf": 0.8
+    },
+    "sources": [
+      "VARGAS2019"
+    ],
+    "explanation": "Thesis rule: deeper pressures rise, near-surface pressures fall, temperatures rise."
+  },
+  {
+    "id": "D-BSW-3",
+    "name": "Abrupt BSW increase (gradual surface pressure decline, flow continues)",
+    "level": "diagnosis",
+    "salience": 40,
+    "if": [
+      {
+        "fact": "OSC_FLOW",
+        "is": "YES",
+        "not": true
+      },
+      {
+        "fact": "TPT_P",
+        "is": "DOWN"
+      },
+      {
+        "fact": "CKP_P",
+        "is": "DOWN"
+      },
+      {
+        "fact": "FLOW",
+        "is": "STOPPING",
+        "not": true
+      },
+      {
+        "fact": "TPT_JUMP",
+        "is": "DOWN",
+        "not": true
+      },
+      {
+        "fact": "ANN_P",
+        "is": "DOWN",
+        "not": true
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "ABRUPT_INCREASE_OF_BSW",
+      "cf": 0.45
+    },
+    "sources": [
+      "VARGAS2019",
+      "DATA_DEV"
+    ],
+    "explanation": "Surface pressures drift down while fluid keeps flowing and the annulus is unaffected — heavier (wetter) fluid column."
+  },
+  {
+    "id": "D-BSW-N",
+    "name": "Against BSW: flow stopping",
+    "level": "diagnosis",
+    "salience": 40,
+    "if": [
+      {
+        "fact": "FLOW",
+        "is": "STOPPING"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "ABRUPT_INCREASE_OF_BSW",
+      "cf": -0.5
+    },
+    "sources": [
+      "VARGAS2019"
+    ],
+    "explanation": "A BSW increase changes the fluid but does not stop the flow."
+  },
+  {
+    "id": "D-SLUG-1",
+    "name": "Severe slugging (large swings along the circuit)",
+    "level": "diagnosis",
+    "salience": 40,
+    "if": [
+      {
+        "fact": "TPT_CYCLE",
+        "is": "LARGE"
+      },
+      {
+        "fact": "CKP_CYCLE",
+        "is": "LARGE"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "SEVERE_SLUGGING",
+      "cf": 0.9
+    },
+    "sources": [
+      "VARGAS2019",
+      "VARGAS2025",
+      "SCHMIDT1985"
+    ],
+    "explanation": "Large, repeated swings at both the subsea tree and the choke: severe slugging is detectable along the whole production circuit."
+  },
+  {
+    "id": "D-SLUG-2",
+    "name": "Severe slugging (large swings at subsea tree)",
+    "level": "diagnosis",
+    "salience": 40,
+    "if": [
+      {
+        "fact": "TPT_CYCLE",
+        "is": "LARGE"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "SEVERE_SLUGGING",
+      "cf": 0.7
+    },
+    "sources": [
+      "VARGAS2025"
+    ],
+    "explanation": "The 3W paper shows slugging as swings above 10 bar at the TPT."
+  },
+  {
+    "id": "D-SLUG-3",
+    "name": "Severe slugging (large swings before choke and in temperature)",
+    "level": "diagnosis",
+    "salience": 40,
+    "if": [
+      {
+        "fact": "CKP_CYCLE",
+        "is": "LARGE"
+      },
+      {
+        "fact": "TPT_T_CYCLE",
+        "is": "LARGE"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "SEVERE_SLUGGING",
+      "cf": 0.7
+    },
+    "sources": [
+      "VARGAS2019",
+      "DATA_DEV"
+    ],
+    "explanation": "Large repeated swings in choke pressure and subsea temperature together."
+  },
+  {
+    "id": "D-SLUG-5",
+    "name": "Severe slugging (large swings in annulus and gas lift)",
+    "level": "diagnosis",
+    "salience": 40,
+    "if": [
+      {
+        "fact": "ANN_CYCLE",
+        "is": "LARGE"
+      },
+      {
+        "fact": "GL_CYCLE",
+        "is": "LARGE"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "SEVERE_SLUGGING",
+      "cf": 0.5
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "The slug cycle also shows in the annulus and gas-lift pressures."
+  },
+  {
+    "id": "D-INST-1",
+    "name": "Flow instability (small swings at subsea tree)",
+    "level": "diagnosis",
+    "salience": 40,
+    "if": [
+      {
+        "fact": "TPT_CYCLE",
+        "is": "SMALL"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "FLOW_INSTABILITY",
+      "cf": 0.6
+    },
+    "sources": [
+      "VARGAS2019",
+      "DATA_DEV"
+    ],
+    "explanation": "Tolerable, non-periodic swings in the subsea pressure."
+  },
+  {
+    "id": "D-INST-2",
+    "name": "Flow instability (small swings at tree and choke)",
+    "level": "diagnosis",
+    "salience": 40,
+    "if": [
+      {
+        "fact": "TPT_CYCLE",
+        "is": "SMALL"
+      },
+      {
+        "fact": "CKP_CYCLE",
+        "is": "SMALL"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "FLOW_INSTABILITY",
+      "cf": 0.75
+    },
+    "sources": [
+      "VARGAS2019",
+      "DATA_DEV"
+    ],
+    "explanation": "Small swings in two places along the flow path."
+  },
+  {
+    "id": "D-INST-3",
+    "name": "Flow instability (small swings before choke)",
+    "level": "diagnosis",
+    "salience": 40,
+    "if": [
+      {
+        "fact": "CKP_CYCLE",
+        "is": "SMALL"
+      },
+      {
+        "fact": "RESTRICTION",
+        "in": [
+          "DHSV_ZONE",
+          "PRODUCTION_LINE",
+          "CHOKE"
+        ],
+        "not": true
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "FLOW_INSTABILITY",
+      "cf": 0.35
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "Small swings before the choke only — weak evidence (normal wells sometimes show this)."
+  },
+  {
+    "id": "D-INST-N",
+    "name": "Against instability: swings are large (that is slugging)",
+    "level": "diagnosis",
+    "salience": 40,
+    "if": [
+      {
+        "fact": "TPT_CYCLE",
+        "is": "LARGE"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "FLOW_INSTABILITY",
+      "cf": -0.6
+    },
+    "sources": [
+      "VARGAS2019"
+    ],
+    "explanation": "Large repeated swings mean severe slugging rather than tolerable instability."
+  },
+  {
+    "id": "D-PL-1",
+    "name": "Rapid productivity loss (annulus and subsea pressures fall)",
+    "level": "diagnosis",
+    "salience": 40,
+    "if": [
+      {
+        "fact": "OSC_FLOW",
+        "is": "YES",
+        "not": true
+      },
+      {
+        "fact": "ANN_P",
+        "is": "DOWN"
+      },
+      {
+        "fact": "TPT_P",
+        "is": "DOWN"
+      },
+      {
+        "fact": "RESTRICTION",
+        "is": "DHSV_ZONE",
+        "not": true
+      },
+      {
+        "fact": "TPT_JUMP",
+        "is": "DOWN",
+        "not": true
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "RAPID_PRODUCTIVITY_LOSS",
+      "cf": 0.7
+    },
+    "sources": [
+      "VARGAS2019",
+      "DATA_DEV"
+    ],
+    "explanation": "The whole system loses pressure (energy) without a blockage: the reservoir can no longer push fluid up."
+  },
+  {
+    "id": "D-PL-2",
+    "name": "Rapid productivity loss (pressures and temperature falling, no blockage)",
+    "level": "diagnosis",
+    "salience": 40,
+    "if": [
+      {
+        "fact": "OSC_FLOW",
+        "is": "YES",
+        "not": true
+      },
+      {
+        "fact": "TPT_P",
+        "is": "DOWN"
+      },
+      {
+        "fact": "CKP_P",
+        "is": "DOWN"
+      },
+      {
+        "fact": "TPT_T",
+        "is": "DOWN"
+      },
+      {
+        "fact": "RESTRICTION",
+        "is": "DHSV_ZONE",
+        "not": true
+      },
+      {
+        "fact": "TPT_JUMP",
+        "is": "DOWN",
+        "not": true
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "RAPID_PRODUCTIVITY_LOSS",
+      "cf": 0.6
+    },
+    "sources": [
+      "VARGAS2019"
+    ],
+    "explanation": "Pressures and temperature decline gradually along the circuit, with no sudden drop and no blockage pattern."
+  },
+  {
+    "id": "D-PL-N",
+    "name": "Against productivity loss: sudden drop",
+    "level": "diagnosis",
+    "salience": 40,
+    "if": [
+      {
+        "fact": "TPT_JUMP",
+        "is": "DOWN"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "RAPID_PRODUCTIVITY_LOSS",
+      "cf": -0.4
+    },
+    "sources": [
+      "VARGAS2019"
+    ],
+    "explanation": "Productivity loss develops over hours; a sudden drop points to a valve closure."
+  },
+  {
+    "id": "D-QR-1",
+    "name": "Quick restriction in PCK (choke closing + pressure up before choke)",
+    "level": "diagnosis",
+    "salience": 40,
+    "if": [
+      {
+        "fact": "RESTRICTION",
+        "is": "CHOKE"
+      },
+      {
+        "fact": "CHOKE_OPENING",
+        "is": "CLOSING"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "QUICK_RESTRICTION_IN_PCK",
+      "cf": 0.85
+    },
+    "sources": [
+      "VARGAS2019",
+      "VARGAS2025"
+    ],
+    "explanation": "The choke is closing and pressure builds up before it."
+  },
+  {
+    "id": "D-QR-2",
+    "name": "Quick restriction in PCK (sudden rise before the choke)",
+    "level": "diagnosis",
+    "salience": 40,
+    "if": [
+      {
+        "fact": "RESTRICTION",
+        "is": "CHOKE"
+      },
+      {
+        "fact": "TPT_JUMP",
+        "is": "UP"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "QUICK_RESTRICTION_IN_PCK",
+      "cf": 0.7
+    },
+    "sources": [
+      "VARGAS2019",
+      "VARGAS2025"
+    ],
+    "explanation": "A blockage at the choke that appeared suddenly."
+  },
+  {
+    "id": "D-QR-3",
+    "name": "Quick restriction in PCK (subsea pressure up, no blockage elsewhere)",
+    "level": "diagnosis",
+    "salience": 40,
+    "if": [
+      {
+        "fact": "OSC_FLOW",
+        "is": "YES",
+        "not": true
+      },
+      {
+        "fact": "TPT_P",
+        "is": "UP"
+      },
+      {
+        "fact": "CKP_P",
+        "is": "DOWN",
+        "not": true
+      },
+      {
+        "fact": "PDG_P",
+        "is": "DOWN",
+        "not": true
+      },
+      {
+        "fact": "TPT_CYCLE",
+        "is": "LARGE",
+        "not": true
+      },
+      {
+        "fact": "FLOW",
+        "is": "STOPPING",
+        "not": true
+      },
+      {
+        "fact": "RESTRICTION",
+        "is": "PRODUCTION_LINE",
+        "not": true
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "QUICK_RESTRICTION_IN_PCK",
+      "cf": 0.4
+    },
+    "sources": [
+      "VARGAS2025",
+      "DATA_DEV"
+    ],
+    "explanation": "3W paper: a PCK restriction raises pressure at TPT, PDG and before the choke; flow continues."
+  },
+  {
+    "id": "D-SC-1",
+    "name": "Scaling in PCK (restriction at choke, choke not moved)",
+    "level": "diagnosis",
+    "salience": 40,
+    "if": [
+      {
+        "fact": "RESTRICTION",
+        "is": "CHOKE"
+      },
+      {
+        "fact": "CHOKE_OPENING",
+        "is": "STABLE"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "SCALING_IN_PCK",
+      "cf": 0.7
+    },
+    "sources": [
+      "VARGAS2019",
+      "PHYSICS"
+    ],
+    "explanation": "Flow is restricted at the choke although nobody moved it — deposits are narrowing it."
+  },
+  {
+    "id": "D-SC-2",
+    "name": "Scaling in PCK (pressure before choke up, outlet cooler, no sudden change)",
+    "level": "diagnosis",
+    "salience": 40,
+    "if": [
+      {
+        "fact": "OSC_FLOW",
+        "is": "YES",
+        "not": true
+      },
+      {
+        "fact": "CKP_P",
+        "is": "UP"
+      },
+      {
+        "fact": "CKP_T",
+        "is": "DOWN"
+      },
+      {
+        "fact": "TPT_JUMP",
+        "is": "UP",
+        "not": true
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "SCALING_IN_PCK",
+      "cf": 0.6
+    },
+    "sources": [
+      "VARGAS2019",
+      "DATA_DEV"
+    ],
+    "explanation": "A slow build-up of pressure before the choke while less fluid passes it."
+  },
+  {
+    "id": "D-SC-3",
+    "name": "Scaling in PCK (slow restriction at choke)",
+    "level": "diagnosis",
+    "salience": 40,
+    "if": [
+      {
+        "fact": "RESTRICTION",
+        "is": "CHOKE"
+      },
+      {
+        "fact": "TPT_JUMP",
+        "is": "UP",
+        "not": true
+      },
+      {
+        "fact": "CHOKE_OPENING",
+        "is": "CLOSING",
+        "not": true
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "SCALING_IN_PCK",
+      "cf": 0.5
+    },
+    "sources": [
+      "VARGAS2019"
+    ],
+    "explanation": "Experts confirm scaling over ~72 h windows: it develops slowly, without sudden jumps."
+  },
+  {
+    "id": "D-SC-4",
+    "name": "Scaling in PCK (pressure before choke above normal)",
+    "level": "diagnosis",
+    "salience": 40,
+    "if": [
+      {
+        "fact": "OSC_FLOW",
+        "is": "YES",
+        "not": true
+      },
+      {
+        "fact": "p_mon_ckp.level",
+        "is": "HIGH"
+      },
+      {
+        "fact": "TPT_JUMP",
+        "is": "UP",
+        "not": true
+      },
+      {
+        "fact": "CKP_CYCLE",
+        "is": "LARGE",
+        "not": true
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "SCALING_IN_PCK",
+      "cf": 0.45
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "Pressure before the choke has settled above this well's normal level."
+  },
+  {
+    "id": "D-SC-5",
+    "name": "Scaling in PCK (slow pressure build-up before the choke)",
+    "level": "diagnosis",
+    "salience": 40,
+    "if": [
+      {
+        "fact": "OSC_FLOW",
+        "is": "YES",
+        "not": true
+      },
+      {
+        "fact": "CKP_P_DRIFT",
+        "is": "UP"
+      },
+      {
+        "fact": "TPT_JUMP",
+        "is": "UP",
+        "not": true
+      },
+      {
+        "fact": "CHOKE_OPENING",
+        "is": "CLOSING",
+        "not": true
+      },
+      {
+        "fact": "FLOW",
+        "is": "STOPPING",
+        "not": true
+      },
+      {
+        "fact": "TPT_P",
+        "is": "DOWN",
+        "not": true
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "SCALING_IN_PCK",
+      "cf": 0.65
+    },
+    "sources": [
+      "VARGAS2019",
+      "PHYSICS",
+      "DATA_DEV"
+    ],
+    "explanation": "Pressure before the choke creeps up over hours with no sudden change and no operator action on the choke: deposits are slowly narrowing it (experts confirm scaling over ~72 h windows)."
+  },
+  {
+    "id": "D-SC-6",
+    "name": "Scaling in PCK (slow build-up before choke, outlet cooling slowly)",
+    "level": "diagnosis",
+    "salience": 40,
+    "if": [
+      {
+        "fact": "OSC_FLOW",
+        "is": "YES",
+        "not": true
+      },
+      {
+        "fact": "CKP_P_DRIFT",
+        "is": "UP"
+      },
+      {
+        "fact": "CKP_T_DRIFT",
+        "is": "DOWN"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "SCALING_IN_PCK",
+      "cf": 0.75
+    },
+    "sources": [
+      "VARGAS2019",
+      "PHYSICS"
+    ],
+    "explanation": "Slowly rising pressure before the choke together with a slowly cooling outlet: less and less fluid passes the choke."
+  },
+  {
+    "id": "D-SC-N",
+    "name": "Against scaling: sudden rise",
+    "level": "diagnosis",
+    "salience": 40,
+    "if": [
+      {
+        "fact": "TPT_JUMP",
+        "is": "UP"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "SCALING_IN_PCK",
+      "cf": -0.4
+    },
+    "sources": [
+      "VARGAS2019"
+    ],
+    "explanation": "Scaling builds up over hours to days, not suddenly."
+  },
+  {
+    "id": "D-HPL-1",
+    "name": "Hydrate in production line (restriction in line + flow stopping)",
+    "level": "diagnosis",
+    "salience": 40,
+    "if": [
+      {
+        "fact": "RESTRICTION",
+        "is": "PRODUCTION_LINE"
+      },
+      {
+        "fact": "FLOW",
+        "is": "STOPPING"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "HYDRATE_IN_PRODUCTION_LINE",
+      "cf": 0.85
+    },
+    "sources": [
+      "VARGAS2019",
+      "VARGAS2025"
+    ],
+    "explanation": "A blockage between the tree and the choke while production stops (T-TPT falling)."
+  },
+  {
+    "id": "D-HPL-2",
+    "name": "Hydrate in production line (restriction in line)",
+    "level": "diagnosis",
+    "salience": 40,
+    "if": [
+      {
+        "fact": "RESTRICTION",
+        "is": "PRODUCTION_LINE"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "HYDRATE_IN_PRODUCTION_LINE",
+      "cf": 0.6
+    },
+    "sources": [
+      "VARGAS2025"
+    ],
+    "explanation": "3W paper: hydrate raises pressure upstream (PDG, TPT) and lowers it downstream (MON-CKP)."
+  },
+  {
+    "id": "D-HPL-3",
+    "name": "Hydrate in production line (hydrate conditions + restriction)",
+    "level": "diagnosis",
+    "salience": 40,
+    "if": [
+      {
+        "fact": "RESTRICTION",
+        "is": "PRODUCTION_LINE"
+      },
+      {
+        "fact": "HYDRATE_CONDITIONS",
+        "is": "YES"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "HYDRATE_IN_PRODUCTION_LINE",
+      "cf": 0.8
+    },
+    "sources": [
+      "VARGAS2019",
+      "PETROWIKI_HYD"
+    ],
+    "explanation": "High pressure and low temperature at the tree favour hydrate formation."
+  },
+  {
+    "id": "D-HPL-4",
+    "name": "Hydrate in production line (deep pressure up, tree cooling)",
+    "level": "diagnosis",
+    "salience": 40,
+    "if": [
+      {
+        "fact": "OSC_FLOW",
+        "is": "YES",
+        "not": true
+      },
+      {
+        "fact": "PDG_P",
+        "is": "UP"
+      },
+      {
+        "fact": "TPT_T",
+        "is": "DOWN"
+      },
+      {
+        "fact": "TPT_P",
+        "is": "DOWN",
+        "not": true
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "HYDRATE_IN_PRODUCTION_LINE",
+      "cf": 0.5
+    },
+    "sources": [
+      "VARGAS2019",
+      "DATA_DEV"
+    ],
+    "explanation": "Pressure builds downhole while the tree cools and its pressure does not fall — blockage above the tree."
+  },
+  {
+    "id": "D-HSL-1",
+    "name": "Hydrate in service line (restriction in service line)",
+    "level": "diagnosis",
+    "salience": 40,
+    "if": [
+      {
+        "fact": "RESTRICTION",
+        "is": "SERVICE_LINE"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "HYDRATE_IN_SERVICE_LINE",
+      "cf": 0.8
+    },
+    "sources": [
+      "VARGAS2025",
+      "PHYSICS"
+    ],
+    "explanation": "The gas-lift/service line is blocked."
+  },
+  {
+    "id": "D-HSL-2",
+    "name": "Hydrate in service line (gas-lift pressure up)",
+    "level": "diagnosis",
+    "salience": 40,
+    "if": [
+      {
+        "fact": "OSC_FLOW",
+        "is": "YES",
+        "not": true
+      },
+      {
+        "fact": "GL_P",
+        "is": "UP"
+      },
+      {
+        "fact": "GAS_LIFT",
+        "is": "ON"
+      },
+      {
+        "fact": "TPT_CYCLE",
+        "is": "LARGE",
+        "not": true
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "HYDRATE_IN_SERVICE_LINE",
+      "cf": 0.45
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "Gas-lift pressure after the choke rises while injecting — the line downstream is harder to push through."
+  },
+  {
+    "id": "D-HSL-3",
+    "name": "Hydrate in service line (gas-lift flow down while injecting)",
+    "level": "diagnosis",
+    "salience": 40,
+    "if": [
+      {
+        "fact": "OSC_FLOW",
+        "is": "YES",
+        "not": true
+      },
+      {
+        "fact": "GL_FLOW",
+        "is": "DOWN"
+      },
+      {
+        "fact": "GL_P",
+        "is": "DOWN",
+        "not": true
+      },
+      {
+        "fact": "TPT_CYCLE",
+        "is": "LARGE",
+        "not": true
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "HYDRATE_IN_SERVICE_LINE",
+      "cf": 0.45
+    },
+    "sources": [
+      "DATA_DEV"
+    ],
+    "explanation": "Gas-lift flow falls without a drop in injection pressure."
+  },
+  {
+    "id": "M-OP-2",
+    "name": "Operation in progress explains the pattern (Spurious closure of DHSV)",
+    "level": "meta",
+    "salience": 30,
+    "if": [
+      {
+        "fact": "OPERATION",
+        "in": [
+          "SHUT_IN",
+          "INTERVENTION",
+          "RESTART"
+        ]
+      },
+      {
+        "fact": "FAULT",
+        "is": "SPURIOUS_CLOSURE_OF_DHSV"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "SPURIOUS_CLOSURE_OF_DHSV",
+      "cf": -0.7
+    },
+    "sources": [
+      "VARGAS2025"
+    ],
+    "explanation": "Operators are shutting in, restarting or intervening on the well, so pressure and flow changes are expected consequences of the operation, not evidence of this fault."
+  },
+  {
+    "id": "M-OP-5",
+    "name": "Operation in progress explains the pattern (Rapid productivity loss)",
+    "level": "meta",
+    "salience": 30,
+    "if": [
+      {
+        "fact": "OPERATION",
+        "in": [
+          "SHUT_IN",
+          "INTERVENTION",
+          "RESTART"
+        ]
+      },
+      {
+        "fact": "FAULT",
+        "is": "RAPID_PRODUCTIVITY_LOSS"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "RAPID_PRODUCTIVITY_LOSS",
+      "cf": -0.6
+    },
+    "sources": [
+      "VARGAS2025"
+    ],
+    "explanation": "Operators are shutting in, restarting or intervening on the well, so pressure and flow changes are expected consequences of the operation, not evidence of this fault."
+  },
+  {
+    "id": "M-OP-1",
+    "name": "Operation in progress explains the pattern (Abrupt increase of BSW)",
+    "level": "meta",
+    "salience": 30,
+    "if": [
+      {
+        "fact": "OPERATION",
+        "in": [
+          "SHUT_IN",
+          "INTERVENTION",
+          "RESTART"
+        ]
+      },
+      {
+        "fact": "FAULT",
+        "is": "ABRUPT_INCREASE_OF_BSW"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "ABRUPT_INCREASE_OF_BSW",
+      "cf": -0.6
+    },
+    "sources": [
+      "VARGAS2025"
+    ],
+    "explanation": "Operators are shutting in, restarting or intervening on the well, so pressure and flow changes are expected consequences of the operation, not evidence of this fault."
+  },
+  {
+    "id": "M-OP-6",
+    "name": "Operation in progress explains the pattern (Quick restriction in PCK)",
+    "level": "meta",
+    "salience": 30,
+    "if": [
+      {
+        "fact": "OPERATION",
+        "in": [
+          "SHUT_IN",
+          "INTERVENTION",
+          "RESTART"
+        ]
+      },
+      {
+        "fact": "FAULT",
+        "is": "QUICK_RESTRICTION_IN_PCK"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "QUICK_RESTRICTION_IN_PCK",
+      "cf": -0.5
+    },
+    "sources": [
+      "VARGAS2025"
+    ],
+    "explanation": "Operators are shutting in, restarting or intervening on the well, so pressure and flow changes are expected consequences of the operation, not evidence of this fault."
+  },
+  {
+    "id": "M-OP-7",
+    "name": "Operation in progress explains the pattern (Scaling in PCK)",
+    "level": "meta",
+    "salience": 30,
+    "if": [
+      {
+        "fact": "OPERATION",
+        "in": [
+          "SHUT_IN",
+          "INTERVENTION",
+          "RESTART"
+        ]
+      },
+      {
+        "fact": "FAULT",
+        "is": "SCALING_IN_PCK"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "SCALING_IN_PCK",
+      "cf": -0.5
+    },
+    "sources": [
+      "VARGAS2025"
+    ],
+    "explanation": "Operators are shutting in, restarting or intervening on the well, so pressure and flow changes are expected consequences of the operation, not evidence of this fault."
+  },
+  {
+    "id": "M-OP-3",
+    "name": "Operation in progress explains the pattern (Severe slugging)",
+    "level": "meta",
+    "salience": 30,
+    "if": [
+      {
+        "fact": "OPERATION",
+        "in": [
+          "SHUT_IN",
+          "INTERVENTION",
+          "RESTART"
+        ]
+      },
+      {
+        "fact": "FAULT",
+        "is": "SEVERE_SLUGGING"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "SEVERE_SLUGGING",
+      "cf": -0.5
+    },
+    "sources": [
+      "VARGAS2025"
+    ],
+    "explanation": "Operators are shutting in, restarting or intervening on the well, so pressure and flow changes are expected consequences of the operation, not evidence of this fault."
+  },
+  {
+    "id": "M-OP-4",
+    "name": "Operation in progress explains the pattern (Flow instability)",
+    "level": "meta",
+    "salience": 30,
+    "if": [
+      {
+        "fact": "OPERATION",
+        "in": [
+          "SHUT_IN",
+          "INTERVENTION",
+          "RESTART"
+        ]
+      },
+      {
+        "fact": "FAULT",
+        "is": "FLOW_INSTABILITY"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "FLOW_INSTABILITY",
+      "cf": -0.5
+    },
+    "sources": [
+      "VARGAS2025"
+    ],
+    "explanation": "Operators are shutting in, restarting or intervening on the well, so pressure and flow changes are expected consequences of the operation, not evidence of this fault."
+  },
+  {
+    "id": "M-OP-9",
+    "name": "Operation in progress explains the pattern (Hydrate in service line)",
+    "level": "meta",
+    "salience": 30,
+    "if": [
+      {
+        "fact": "OPERATION",
+        "in": [
+          "SHUT_IN",
+          "INTERVENTION",
+          "RESTART"
+        ]
+      },
+      {
+        "fact": "FAULT",
+        "is": "HYDRATE_IN_SERVICE_LINE"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "HYDRATE_IN_SERVICE_LINE",
+      "cf": -0.5
+    },
+    "sources": [
+      "VARGAS2025"
+    ],
+    "explanation": "Operators are shutting in, restarting or intervening on the well, so pressure and flow changes are expected consequences of the operation, not evidence of this fault."
+  },
+  {
+    "id": "M-OP-HYD",
+    "name": "Hydrate remediation operation in progress",
+    "level": "meta",
+    "salience": 30,
+    "if": [
+      {
+        "fact": "OPERATION",
+        "is": "INTERVENTION"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "HYDRATE_IN_PRODUCTION_LINE",
+      "cf": 0.4
+    },
+    "sources": [
+      "PETROWIKI_HYD",
+      "VARGAS2025"
+    ],
+    "explanation": "Depressurization, flushing and bullheading are the standard ways to clear a hydrate plug; such an operation suggests a hydrate is being dealt with. (Context rule — its effect is reported separately in the evaluation.)"
+  },
+  {
+    "id": "M-RESTART-HYD",
+    "name": "Restart raises hydrate likelihood",
+    "level": "meta",
+    "salience": 30,
+    "if": [
+      {
+        "fact": "OPERATION",
+        "is": "RESTART"
+      },
+      {
+        "fact": "RESTRICTION",
+        "in": [
+          "PRODUCTION_LINE",
+          "SERVICE_LINE"
+        ]
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "HYDRATE_IN_PRODUCTION_LINE",
+      "cf": 0.3
+    },
+    "sources": [
+      "PETROWIKI_HYD"
+    ],
+    "explanation": "Cold restarts are a classic time for hydrate formation."
+  },
+  {
+    "id": "Q-DHSV-NO",
+    "name": "Answer NO to Q_DHSV_COMMANDED",
+    "level": "answer",
+    "salience": 35,
+    "if": [
+      {
+        "fact": "FAULT",
+        "is": "SPURIOUS_CLOSURE_OF_DHSV"
+      },
+      {
+        "fact": "Q_DHSV_COMMANDED",
+        "is": "NO"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "SPURIOUS_CLOSURE_OF_DHSV",
+      "cf": 0.5
+    },
+    "sources": [
+      "VARGAS2019"
+    ],
+    "explanation": "Nobody commanded the closure, so it was spurious."
+  },
+  {
+    "id": "Q-DHSV-YES",
+    "name": "Answer YES to Q_DHSV_COMMANDED",
+    "level": "answer",
+    "salience": 35,
+    "if": [
+      {
+        "fact": "FAULT",
+        "is": "SPURIOUS_CLOSURE_OF_DHSV"
+      },
+      {
+        "fact": "Q_DHSV_COMMANDED",
+        "is": "YES"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "SPURIOUS_CLOSURE_OF_DHSV",
+      "cf": -0.9
+    },
+    "sources": [
+      "VARGAS2019"
+    ],
+    "explanation": "The closure was commanded on purpose — expected, not a fault."
+  },
+  {
+    "id": "Q-DHSVH-YES",
+    "name": "Answer YES to Q_DHSV_HYDRAULICS",
+    "level": "answer",
+    "salience": 35,
+    "if": [
+      {
+        "fact": "FAULT",
+        "is": "SPURIOUS_CLOSURE_OF_DHSV"
+      },
+      {
+        "fact": "Q_DHSV_HYDRAULICS",
+        "is": "YES"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "SPURIOUS_CLOSURE_OF_DHSV",
+      "cf": 0.3
+    },
+    "sources": [
+      "VARGAS2019"
+    ],
+    "explanation": "Spurious closures usually happen with no surface indication (normal control-line pressure)."
+  },
+  {
+    "id": "Q-BSW-YES",
+    "name": "Answer YES to Q_WATER_SAMPLE",
+    "level": "answer",
+    "salience": 35,
+    "if": [
+      {
+        "fact": "FAULT",
+        "is": "ABRUPT_INCREASE_OF_BSW"
+      },
+      {
+        "fact": "Q_WATER_SAMPLE",
+        "is": "YES"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "ABRUPT_INCREASE_OF_BSW",
+      "cf": 0.7
+    },
+    "sources": [
+      "VARGAS2019"
+    ],
+    "explanation": "A sample directly confirms the higher water cut."
+  },
+  {
+    "id": "Q-BSW-NO",
+    "name": "Answer NO to Q_WATER_SAMPLE",
+    "level": "answer",
+    "salience": 35,
+    "if": [
+      {
+        "fact": "FAULT",
+        "is": "ABRUPT_INCREASE_OF_BSW"
+      },
+      {
+        "fact": "Q_WATER_SAMPLE",
+        "is": "NO"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "ABRUPT_INCREASE_OF_BSW",
+      "cf": -0.7
+    },
+    "sources": [
+      "VARGAS2019"
+    ],
+    "explanation": "The sample shows no water-cut increase."
+  },
+  {
+    "id": "Q-SLUG-YES",
+    "name": "Answer YES to Q_SEPARATOR_SURGES",
+    "level": "answer",
+    "salience": 35,
+    "if": [
+      {
+        "fact": "FAULT",
+        "is": "SEVERE_SLUGGING"
+      },
+      {
+        "fact": "Q_SEPARATOR_SURGES",
+        "is": "YES"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "SEVERE_SLUGGING",
+      "cf": 0.5
+    },
+    "sources": [
+      "SCHMIDT1985"
+    ],
+    "explanation": "Regular surges at the separator are the classic sign of slugging."
+  },
+  {
+    "id": "Q-SLUG-NO",
+    "name": "Answer NO to Q_SEPARATOR_SURGES",
+    "level": "answer",
+    "salience": 35,
+    "if": [
+      {
+        "fact": "FAULT",
+        "is": "SEVERE_SLUGGING"
+      },
+      {
+        "fact": "Q_SEPARATOR_SURGES",
+        "is": "NO"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "SEVERE_SLUGGING",
+      "cf": -0.4
+    },
+    "sources": [
+      "VARGAS2019"
+    ],
+    "explanation": "No regular surges: the swings are not periodic."
+  },
+  {
+    "id": "Q-INST-NO",
+    "name": "Answer NO to Q_SEPARATOR_SURGES",
+    "level": "answer",
+    "salience": 35,
+    "if": [
+      {
+        "fact": "FAULT",
+        "is": "FLOW_INSTABILITY"
+      },
+      {
+        "fact": "Q_SEPARATOR_SURGES",
+        "is": "NO"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "FLOW_INSTABILITY",
+      "cf": 0.3
+    },
+    "sources": [
+      "VARGAS2019"
+    ],
+    "explanation": "Disturbances without a regular cycle point to instability."
+  },
+  {
+    "id": "Q-INST-SP",
+    "name": "Answer YES to Q_SETPOINT_CHANGE",
+    "level": "answer",
+    "salience": 35,
+    "if": [
+      {
+        "fact": "FAULT",
+        "is": "FLOW_INSTABILITY"
+      },
+      {
+        "fact": "Q_SETPOINT_CHANGE",
+        "is": "YES"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "FLOW_INSTABILITY",
+      "cf": 0.3
+    },
+    "sources": [
+      "VARGAS2019"
+    ],
+    "explanation": "A recent set-point change can trigger instability."
+  },
+  {
+    "id": "Q-QR-SP",
+    "name": "Answer YES to Q_SETPOINT_CHANGE",
+    "level": "answer",
+    "salience": 35,
+    "if": [
+      {
+        "fact": "FAULT",
+        "is": "QUICK_RESTRICTION_IN_PCK"
+      },
+      {
+        "fact": "Q_SETPOINT_CHANGE",
+        "is": "YES"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "QUICK_RESTRICTION_IN_PCK",
+      "cf": -0.6
+    },
+    "sources": [
+      "VARGAS2019"
+    ],
+    "explanation": "The choke was moved deliberately — an operator action, not an unwanted restriction."
+  },
+  {
+    "id": "Q-PL-YES",
+    "name": "Answer YES to Q_WELL_TEST",
+    "level": "answer",
+    "salience": 35,
+    "if": [
+      {
+        "fact": "FAULT",
+        "is": "RAPID_PRODUCTIVITY_LOSS"
+      },
+      {
+        "fact": "Q_WELL_TEST",
+        "is": "YES"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "RAPID_PRODUCTIVITY_LOSS",
+      "cf": 0.6
+    },
+    "sources": [
+      "VARGAS2019"
+    ],
+    "explanation": "The well test confirms the well is producing less than expected."
+  },
+  {
+    "id": "Q-QR-YES",
+    "name": "Answer YES to Q_CHOKE_LOCAL",
+    "level": "answer",
+    "salience": 35,
+    "if": [
+      {
+        "fact": "FAULT",
+        "is": "QUICK_RESTRICTION_IN_PCK"
+      },
+      {
+        "fact": "Q_CHOKE_LOCAL",
+        "is": "YES"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "QUICK_RESTRICTION_IN_PCK",
+      "cf": 0.6
+    },
+    "sources": [
+      "VARGAS2019"
+    ],
+    "explanation": "The choke is physically more closed than intended."
+  },
+  {
+    "id": "Q-SC-CHK",
+    "name": "Answer NO to Q_CHOKE_LOCAL",
+    "level": "answer",
+    "salience": 35,
+    "if": [
+      {
+        "fact": "FAULT",
+        "is": "SCALING_IN_PCK"
+      },
+      {
+        "fact": "Q_CHOKE_LOCAL",
+        "is": "NO"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "SCALING_IN_PCK",
+      "cf": 0.3
+    },
+    "sources": [
+      "VARGAS2019"
+    ],
+    "explanation": "The choke position is correct, so the restriction is inside it (deposits)."
+  },
+  {
+    "id": "Q-QR-NO",
+    "name": "Answer NO to Q_CHOKE_LOCAL",
+    "level": "answer",
+    "salience": 35,
+    "if": [
+      {
+        "fact": "FAULT",
+        "is": "QUICK_RESTRICTION_IN_PCK"
+      },
+      {
+        "fact": "Q_CHOKE_LOCAL",
+        "is": "NO"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "QUICK_RESTRICTION_IN_PCK",
+      "cf": -0.5
+    },
+    "sources": [
+      "VARGAS2019"
+    ],
+    "explanation": "The choke position is correct."
+  },
+  {
+    "id": "Q-SC-YES",
+    "name": "Answer YES to Q_SCALE_HISTORY",
+    "level": "answer",
+    "salience": 35,
+    "if": [
+      {
+        "fact": "FAULT",
+        "is": "SCALING_IN_PCK"
+      },
+      {
+        "fact": "Q_SCALE_HISTORY",
+        "is": "YES"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "SCALING_IN_PCK",
+      "cf": 0.5
+    },
+    "sources": [
+      "VARGAS2019"
+    ],
+    "explanation": "Scaling tends to recur where water chemistry favours it."
+  },
+  {
+    "id": "Q-HPL-CURVE",
+    "name": "Answer YES to Q_HYDRATE_CURVE",
+    "level": "answer",
+    "salience": 35,
+    "if": [
+      {
+        "fact": "FAULT",
+        "is": "HYDRATE_IN_PRODUCTION_LINE"
+      },
+      {
+        "fact": "Q_HYDRATE_CURVE",
+        "is": "YES"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "HYDRATE_IN_PRODUCTION_LINE",
+      "cf": 0.6
+    },
+    "sources": [
+      "PETROWIKI_HYD"
+    ],
+    "explanation": "Conditions are inside the hydrate-formation region."
+  },
+  {
+    "id": "Q-HPL-NOCURVE",
+    "name": "Answer NO to Q_HYDRATE_CURVE",
+    "level": "answer",
+    "salience": 35,
+    "if": [
+      {
+        "fact": "FAULT",
+        "is": "HYDRATE_IN_PRODUCTION_LINE"
+      },
+      {
+        "fact": "Q_HYDRATE_CURVE",
+        "is": "NO"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "HYDRATE_IN_PRODUCTION_LINE",
+      "cf": -0.7
+    },
+    "sources": [
+      "PETROWIKI_HYD"
+    ],
+    "explanation": "Hydrates cannot form outside their pressure–temperature region."
+  },
+  {
+    "id": "Q-HSL-CURVE",
+    "name": "Answer YES to Q_HYDRATE_CURVE",
+    "level": "answer",
+    "salience": 35,
+    "if": [
+      {
+        "fact": "FAULT",
+        "is": "HYDRATE_IN_SERVICE_LINE"
+      },
+      {
+        "fact": "Q_HYDRATE_CURVE",
+        "is": "YES"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "HYDRATE_IN_SERVICE_LINE",
+      "cf": 0.5
+    },
+    "sources": [
+      "PETROWIKI_HYD"
+    ],
+    "explanation": "Conditions are inside the hydrate-formation region."
+  },
+  {
+    "id": "Q-HPL-RST",
+    "name": "Answer YES to Q_RECENT_RESTART",
+    "level": "answer",
+    "salience": 35,
+    "if": [
+      {
+        "fact": "FAULT",
+        "is": "HYDRATE_IN_PRODUCTION_LINE"
+      },
+      {
+        "fact": "Q_RECENT_RESTART",
+        "is": "YES"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "HYDRATE_IN_PRODUCTION_LINE",
+      "cf": 0.3
+    },
+    "sources": [
+      "PETROWIKI_HYD"
+    ],
+    "explanation": "Shut-ins and cold restarts are a common time for hydrates to form."
+  },
+  {
+    "id": "Q-HSL-RST",
+    "name": "Answer YES to Q_RECENT_RESTART",
+    "level": "answer",
+    "salience": 35,
+    "if": [
+      {
+        "fact": "FAULT",
+        "is": "HYDRATE_IN_SERVICE_LINE"
+      },
+      {
+        "fact": "Q_RECENT_RESTART",
+        "is": "YES"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "HYDRATE_IN_SERVICE_LINE",
+      "cf": 0.2
+    },
+    "sources": [
+      "PETROWIKI_HYD"
+    ],
+    "explanation": "Shut-ins and cold restarts are a common time for hydrates to form."
+  },
+  {
+    "id": "Q-HSL-INH",
+    "name": "Answer YES to Q_SERVICE_LINE_INHIBITOR",
+    "level": "answer",
+    "salience": 35,
+    "if": [
+      {
+        "fact": "FAULT",
+        "is": "HYDRATE_IN_SERVICE_LINE"
+      },
+      {
+        "fact": "Q_SERVICE_LINE_INHIBITOR",
+        "is": "YES"
+      }
+    ],
+    "then": {
+      "fact": "FAULT",
+      "value": "HYDRATE_IN_SERVICE_LINE",
+      "cf": 0.5
+    },
+    "sources": [
+      "PETROWIKI_HYD"
+    ],
+    "explanation": "Without inhibitor, water left in the line can turn into hydrate."
+  }
+]

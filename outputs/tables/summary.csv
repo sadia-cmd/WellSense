@@ -1,0 +1,7 @@
+,WellSense
+held-out instances scored,959.0
+accuracy,0.5213764337851929
+balanced accuracy,0.5742791176877676
+event detection rate,0.22631578947368422
+false-alarm rate (normal wells),0.15716753022452504
+median detection delay (min),17.5

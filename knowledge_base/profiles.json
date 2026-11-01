@@ -1,0 +1,29 @@
+{
+  "SAFETY_FIRST": {
+    "label": "Safety first (HSE, well integrity)",
+    "weights": {
+      "safety_risk": 0.6,
+      "production_loss": 0.1,
+      "cost": 0.05,
+      "effectiveness": 0.25
+    }
+  },
+  "PRODUCTION_FIRST": {
+    "label": "Production first (production manager)",
+    "weights": {
+      "safety_risk": 0.15,
+      "production_loss": 0.6,
+      "cost": 0.05,
+      "effectiveness": 0.2
+    }
+  },
+  "COST_FIRST": {
+    "label": "Cost first (finance)",
+    "weights": {
+      "safety_risk": 0.15,
+      "production_loss": 0.1,
+      "cost": 0.6,
+      "effectiveness": 0.15
+    }
+  }
+}

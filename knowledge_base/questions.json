@@ -1,0 +1,139 @@
+[
+  {
+    "id": "Q_DHSV_COMMANDED",
+    "text": "Was the DHSV closed on purpose (shutdown or ESD command) in the last hour?",
+    "answers": [
+      "YES",
+      "NO"
+    ],
+    "who": "Control-room operator",
+    "about": [
+      "SPURIOUS_CLOSURE_OF_DHSV"
+    ]
+  },
+  {
+    "id": "Q_DHSV_HYDRAULICS",
+    "text": "Is the DHSV hydraulic control-line pressure at its normal value?",
+    "answers": [
+      "YES",
+      "NO"
+    ],
+    "who": "Control-room operator",
+    "about": [
+      "SPURIOUS_CLOSURE_OF_DHSV"
+    ]
+  },
+  {
+    "id": "Q_WATER_SAMPLE",
+    "text": "Does the latest fluid sample show a higher water cut (BSW) than before?",
+    "answers": [
+      "YES",
+      "NO"
+    ],
+    "who": "Production chemist",
+    "about": [
+      "ABRUPT_INCREASE_OF_BSW"
+    ]
+  },
+  {
+    "id": "Q_SEPARATOR_SURGES",
+    "text": "Are the platform separator levels surging in a regular, repeating cycle?",
+    "answers": [
+      "YES",
+      "NO"
+    ],
+    "who": "Control-room operator",
+    "about": [
+      "SEVERE_SLUGGING",
+      "FLOW_INSTABILITY"
+    ]
+  },
+  {
+    "id": "Q_SETPOINT_CHANGE",
+    "text": "Was the production choke or gas-lift rate changed in the last 2 hours?",
+    "answers": [
+      "YES",
+      "NO"
+    ],
+    "who": "Control-room operator",
+    "about": [
+      "FLOW_INSTABILITY",
+      "QUICK_RESTRICTION_IN_PCK"
+    ]
+  },
+  {
+    "id": "Q_WELL_TEST",
+    "text": "Did the most recent well test show production below the expected rate?",
+    "answers": [
+      "YES",
+      "NO"
+    ],
+    "who": "Production engineer",
+    "about": [
+      "RAPID_PRODUCTIVITY_LOSS"
+    ]
+  },
+  {
+    "id": "Q_CHOKE_LOCAL",
+    "text": "Checked on site, is the production choke more closed than its set-point?",
+    "answers": [
+      "YES",
+      "NO"
+    ],
+    "who": "Field operator",
+    "about": [
+      "QUICK_RESTRICTION_IN_PCK",
+      "SCALING_IN_PCK"
+    ]
+  },
+  {
+    "id": "Q_SCALE_HISTORY",
+    "text": "Has this well had scale deposits before, or does water analysis show a scaling tendency?",
+    "answers": [
+      "YES",
+      "NO"
+    ],
+    "who": "Production chemist",
+    "about": [
+      "SCALING_IN_PCK"
+    ]
+  },
+  {
+    "id": "Q_HYDRATE_CURVE",
+    "text": "Is the production line inside the hydrate-formation region for its current pressure and temperature?",
+    "answers": [
+      "YES",
+      "NO"
+    ],
+    "who": "Flow-assurance engineer",
+    "about": [
+      "HYDRATE_IN_PRODUCTION_LINE",
+      "HYDRATE_IN_SERVICE_LINE"
+    ]
+  },
+  {
+    "id": "Q_RECENT_RESTART",
+    "text": "Was the well shut in or restarted during the last 24 hours?",
+    "answers": [
+      "YES",
+      "NO"
+    ],
+    "who": "Control-room operator",
+    "about": [
+      "HYDRATE_IN_PRODUCTION_LINE",
+      "HYDRATE_IN_SERVICE_LINE"
+    ]
+  },
+  {
+    "id": "Q_SERVICE_LINE_INHIBITOR",
+    "text": "Was the service line left without hydrate inhibitor (for example after an operation)?",
+    "answers": [
+      "YES",
+      "NO"
+    ],
+    "who": "Flow-assurance engineer",
+    "about": [
+      "HYDRATE_IN_SERVICE_LINE"
+    ]
+  }
+]

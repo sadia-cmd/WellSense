@@ -1,0 +1,6 @@
+stage,instances,rows
+Official 3W dataset (real + simulated + hand-drawn),2228,
+Step 1: real instances only,1119,32872250
+Step 2: one reading per minute,1119,549063
+Step 3: up to 15 instances per event type,125,193301
+Step 4: window around each fault,125,65846

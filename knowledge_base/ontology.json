@@ -1,0 +1,414 @@
+{
+  "faults": {
+    "ABRUPT_INCREASE_OF_BSW": {
+      "code": 1,
+      "label": "Abrupt increase of BSW",
+      "category": "Reservoir / fluid",
+      "description": "Sudden rise in the fraction of water and sediment in the produced liquid.",
+      "severity": 3,
+      "sources": [
+        "VARGAS2019",
+        "VARGAS2025"
+      ]
+    },
+    "SPURIOUS_CLOSURE_OF_DHSV": {
+      "code": 2,
+      "label": "Spurious closure of DHSV",
+      "category": "Equipment (safety valve)",
+      "description": "The downhole safety valve closes by itself, usually without any surface indication; production stops.",
+      "severity": 4,
+      "sources": [
+        "VARGAS2019",
+        "VARGAS2025"
+      ]
+    },
+    "SEVERE_SLUGGING": {
+      "code": 3,
+      "label": "Severe slugging",
+      "category": "Flow assurance",
+      "description": "Periodic, intense flow instability detectable along the whole production circuit; can stress or damage equipment.",
+      "severity": 4,
+      "sources": [
+        "VARGAS2019",
+        "VARGAS2025",
+        "SCHMIDT1985"
+      ]
+    },
+    "FLOW_INSTABILITY": {
+      "code": 4,
+      "label": "Flow instability",
+      "category": "Flow assurance",
+      "description": "Non-periodic, tolerable flow disturbances that can evolve into severe slugging.",
+      "severity": 2,
+      "sources": [
+        "VARGAS2019",
+        "VARGAS2025"
+      ]
+    },
+    "RAPID_PRODUCTIVITY_LOSS": {
+      "code": 5,
+      "label": "Rapid productivity loss",
+      "category": "Reservoir / fluid",
+      "description": "System energy no longer overcomes losses; flow declines and natural flow can be lost.",
+      "severity": 3,
+      "sources": [
+        "VARGAS2019",
+        "VARGAS2025"
+      ]
+    },
+    "QUICK_RESTRICTION_IN_PCK": {
+      "code": 6,
+      "label": "Quick restriction in PCK",
+      "category": "Equipment (choke)",
+      "description": "Fast, unwanted restriction of the production choke caused by operational problems.",
+      "severity": 2,
+      "sources": [
+        "VARGAS2019",
+        "VARGAS2025"
+      ]
+    },
+    "SCALING_IN_PCK": {
+      "code": 7,
+      "label": "Scaling in PCK",
+      "category": "Flow assurance",
+      "description": "Inorganic deposits build up in the production choke and gradually restrict flow.",
+      "severity": 3,
+      "sources": [
+        "VARGAS2019",
+        "VARGAS2025"
+      ]
+    },
+    "HYDRATE_IN_PRODUCTION_LINE": {
+      "code": 8,
+      "label": "Hydrate in production line",
+      "category": "Flow assurance",
+      "description": "Ice-like water–gas crystals form at high pressure and low temperature and can block the production line.",
+      "severity": 5,
+      "sources": [
+        "VARGAS2019",
+        "VARGAS2025",
+        "PETROWIKI_HYD"
+      ]
+    },
+    "HYDRATE_IN_SERVICE_LINE": {
+      "code": 9,
+      "label": "Hydrate in service line",
+      "category": "Flow assurance",
+      "description": "Hydrate blockage in the service (gas-lift) line.",
+      "severity": 4,
+      "sources": [
+        "VARGAS2025",
+        "PETROWIKI_HYD"
+      ]
+    }
+  },
+  "equipment": [
+    {
+      "id": "RESERVOIR",
+      "label": "Reservoir",
+      "flow_position": 0,
+      "description": "Rock formation that supplies oil, gas and water"
+    },
+    {
+      "id": "PDG",
+      "label": "Permanent downhole gauge",
+      "flow_position": 1,
+      "description": "Pressure/temperature gauge deep in the well, below the DHSV"
+    },
+    {
+      "id": "DHSV",
+      "label": "Downhole safety valve",
+      "flow_position": 2,
+      "description": "Fail-safe valve in the production tubing, held open hydraulically"
+    },
+    {
+      "id": "TUBING",
+      "label": "Production tubing",
+      "flow_position": 3,
+      "description": "Pipe that carries fluid from the reservoir to the seabed"
+    },
+    {
+      "id": "XMAS_TREE",
+      "label": "Subsea Christmas tree (TPT)",
+      "flow_position": 4,
+      "description": "Valve assembly on the seabed; carries the TPT pressure/temperature transducer"
+    },
+    {
+      "id": "PRODUCTION_LINE",
+      "label": "Production line (flowline + riser)",
+      "flow_position": 5,
+      "description": "Pipe from the subsea tree up to the platform"
+    },
+    {
+      "id": "PCK",
+      "label": "Production choke (PCK)",
+      "flow_position": 6,
+      "description": "Topside valve that controls the well's flow"
+    },
+    {
+      "id": "PLATFORM",
+      "label": "Platform process plant",
+      "flow_position": 7,
+      "description": "Separators and processing downstream of the choke"
+    },
+    {
+      "id": "GLCK",
+      "label": "Gas-lift choke (GLCK)",
+      "flow_position": null,
+      "description": "Topside valve controlling gas-lift injection"
+    },
+    {
+      "id": "SERVICE_LINE",
+      "label": "Service line",
+      "flow_position": null,
+      "description": "Line from the platform to the well used for gas lift and operations"
+    },
+    {
+      "id": "ANNULUS",
+      "label": "Well annulus",
+      "flow_position": null,
+      "description": "Space between tubing and casing; gas-lift gas travels down here"
+    }
+  ],
+  "sensors": [
+    {
+      "tag": "P-PDG",
+      "name": "p_pdg",
+      "measures": "pressure",
+      "located_at": "PDG"
+    },
+    {
+      "tag": "T-PDG",
+      "name": "t_pdg",
+      "measures": "temperature",
+      "located_at": "PDG"
+    },
+    {
+      "tag": "P-TPT",
+      "name": "p_tpt",
+      "measures": "pressure",
+      "located_at": "XMAS_TREE"
+    },
+    {
+      "tag": "T-TPT",
+      "name": "t_tpt",
+      "measures": "temperature",
+      "located_at": "XMAS_TREE"
+    },
+    {
+      "tag": "P-MON-CKP",
+      "name": "p_mon_ckp",
+      "measures": "pressure",
+      "located_at": "PCK"
+    },
+    {
+      "tag": "T-JUS-CKP",
+      "name": "t_jus_ckp",
+      "measures": "temperature",
+      "located_at": "PCK"
+    },
+    {
+      "tag": "T-MON-CKP",
+      "name": "t_mon_ckp",
+      "measures": "temperature",
+      "located_at": "PCK"
+    },
+    {
+      "tag": "P-JUS-CKP",
+      "name": "p_jus_ckp",
+      "measures": "pressure",
+      "located_at": "PCK"
+    },
+    {
+      "tag": "ABER-CKP",
+      "name": "aber_ckp",
+      "measures": "opening",
+      "located_at": "PCK"
+    },
+    {
+      "tag": "P-JUS-CKGL",
+      "name": "p_jus_ckgl",
+      "measures": "pressure",
+      "located_at": "GLCK"
+    },
+    {
+      "tag": "P-MON-CKGL",
+      "name": "p_mon_ckgl",
+      "measures": "pressure",
+      "located_at": "GLCK"
+    },
+    {
+      "tag": "ABER-CKGL",
+      "name": "aber_ckgl",
+      "measures": "opening",
+      "located_at": "GLCK"
+    },
+    {
+      "tag": "QGL",
+      "name": "qgl",
+      "measures": "flow",
+      "located_at": "SERVICE_LINE"
+    },
+    {
+      "tag": "P-ANULAR",
+      "name": "p_anular",
+      "measures": "pressure",
+      "located_at": "ANNULUS"
+    },
+    {
+      "tag": "ESTADO-DHSV",
+      "name": "dhsv_state",
+      "measures": "valve state",
+      "located_at": "DHSV"
+    }
+  ],
+  "symptoms": {
+    "PDG_P": {
+      "label": "Downhole pressure (PDG)",
+      "from_variable": "p_pdg"
+    },
+    "TPT_P": {
+      "label": "Subsea tree pressure (TPT)",
+      "from_variable": "p_tpt"
+    },
+    "CKP_P": {
+      "label": "Pressure upstream of production choke",
+      "from_variable": "p_mon_ckp"
+    },
+    "TPT_T": {
+      "label": "Subsea tree temperature (TPT)",
+      "from_variable": "t_tpt"
+    },
+    "CKP_T": {
+      "label": "Temperature downstream of production choke",
+      "from_variable": "t_jus_ckp"
+    },
+    "PDG_T": {
+      "label": "Downhole temperature (PDG)",
+      "from_variable": "t_pdg"
+    },
+    "ANN_P": {
+      "label": "Annulus pressure",
+      "from_variable": "p_anular"
+    },
+    "GL_P": {
+      "label": "Gas-lift pressure downstream of GLCK",
+      "from_variable": "p_jus_ckgl"
+    },
+    "GL_FLOW": {
+      "label": "Gas-lift flow",
+      "from_variable": "qgl"
+    }
+  },
+  "causes": [
+    {
+      "id": "C-WATER",
+      "text": "Water breakthrough (aquifer or injected water reaches the well)",
+      "fault": "ABRUPT_INCREASE_OF_BSW",
+      "source": "VARGAS2019"
+    },
+    {
+      "id": "C-DHSV-FAIL",
+      "text": "DHSV or its hydraulic actuator fails and closes the valve with no surface command",
+      "fault": "SPURIOUS_CLOSURE_OF_DHSV",
+      "source": "VARGAS2019"
+    },
+    {
+      "id": "C-RISER-LIQ",
+      "text": "Liquid accumulates at the riser base, then is pushed out by gas in cycles",
+      "fault": "SEVERE_SLUGGING",
+      "source": "SCHMIDT1985"
+    },
+    {
+      "id": "C-FLOW-DIST",
+      "text": "Gas–liquid flow disturbances without a regular cycle",
+      "fault": "FLOW_INSTABILITY",
+      "source": "VARGAS2019"
+    },
+    {
+      "id": "C-RES-ENERGY",
+      "text": "Reservoir properties change (pressure, BSW, GOR, viscosity) so energy no longer overcomes losses",
+      "fault": "RAPID_PRODUCTIVITY_LOSS",
+      "source": "VARGAS2019"
+    },
+    {
+      "id": "C-CHOKE-OP",
+      "text": "Operational problem closes the production choke unintentionally",
+      "fault": "QUICK_RESTRICTION_IN_PCK",
+      "source": "VARGAS2019"
+    },
+    {
+      "id": "C-SCALE",
+      "text": "Inorganic deposits (scale) form in the choke",
+      "fault": "SCALING_IN_PCK",
+      "source": "VARGAS2019"
+    },
+    {
+      "id": "C-HYD-PL",
+      "text": "Water and gas at high pressure and low temperature form hydrate crystals in the production line",
+      "fault": "HYDRATE_IN_PRODUCTION_LINE",
+      "source": "VARGAS2019"
+    },
+    {
+      "id": "C-HYD-SL",
+      "text": "Water and gas at high pressure and low temperature form hydrate crystals in the service line",
+      "fault": "HYDRATE_IN_SERVICE_LINE",
+      "source": "VARGAS2025"
+    }
+  ],
+  "stakeholders": [
+    {
+      "id": "OPERATOR",
+      "role": "Control-room operator",
+      "concern": "Fast, clear alarms; few false alarms; simple steps"
+    },
+    {
+      "id": "PROD_ENG",
+      "role": "Production engineer",
+      "concern": "Accurate diagnosis; keep the well producing"
+    },
+    {
+      "id": "WELL_INTEGRITY",
+      "role": "Well-integrity / maintenance team",
+      "concern": "Safe interventions; protect well barriers (DHSV)"
+    },
+    {
+      "id": "HSE",
+      "role": "HSE (safety) officer",
+      "concern": "No unsafe recommendation, ever"
+    },
+    {
+      "id": "PROD_MANAGER",
+      "role": "Production manager",
+      "concern": "Minimise lost production and downtime"
+    },
+    {
+      "id": "FINANCE",
+      "role": "Asset / finance manager",
+      "concern": "Minimise intervention cost (rigs can exceed US$500k/day)"
+    },
+    {
+      "id": "RESERVOIR_ENG",
+      "role": "Reservoir engineer",
+      "concern": "Understand water breakthrough and productivity changes"
+    }
+  ],
+  "relations": {
+    "upstreamOf (production path)": [
+      "RESERVOIR",
+      "PDG",
+      "DHSV",
+      "TUBING",
+      "XMAS_TREE",
+      "PRODUCTION_LINE",
+      "PCK",
+      "PLATFORM"
+    ],
+    "gas-lift path": [
+      "GLCK",
+      "SERVICE_LINE",
+      "ANNULUS",
+      "TUBING"
+    ]
+  }
+}

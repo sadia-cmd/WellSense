@@ -1,0 +1,31 @@
+rule,fault,instances,minutes,precision,expert_cf,rule name
+D-BSW-1,ABRUPT_INCREASE_OF_BSW,19,2790,0.15789473684210525,0.7,"Abrupt BSW increase (surface pressure down, temperatures up)"
+D-BSW-2,ABRUPT_INCREASE_OF_BSW,3,37,0.0,0.8,"Abrupt BSW increase (deep pressure up, surface down, temperatures up)"
+D-BSW-3,ABRUPT_INCREASE_OF_BSW,17,1128,0.11764705882352941,0.45,"Abrupt BSW increase (gradual surface pressure decline, flow continues)"
+D-DHSV-1,SPURIOUS_CLOSURE_OF_DHSV,17,1613,0.7647058823529411,0.85,Spurious DHSV closure (restriction at DHSV + flow stopping)
+D-DHSV-2,SPURIOUS_CLOSURE_OF_DHSV,20,1696,0.6280701754385964,0.6,Spurious DHSV closure (restriction at DHSV)
+D-HPL-1,HYDRATE_IN_PRODUCTION_LINE,12,835,0.25,0.85,Hydrate in production line (restriction in line + flow stopping)
+D-HPL-2,HYDRATE_IN_PRODUCTION_LINE,25,1662,0.19466666666666668,0.6,Hydrate in production line (restriction in line)
+D-HPL-3,HYDRATE_IN_PRODUCTION_LINE,12,834,0.25,0.8,Hydrate in production line (hydrate conditions + restriction)
+D-HPL-4,HYDRATE_IN_PRODUCTION_LINE,13,2001,0.3844413505046989,0.5,"Hydrate in production line (deep pressure up, tree cooling)"
+D-HSL-1,HYDRATE_IN_SERVICE_LINE,16,1415,0.29378279378279376,0.8,Hydrate in service line (restriction in service line)
+D-HSL-2,HYDRATE_IN_SERVICE_LINE,20,1189,0.26373749149607273,0.45,Hydrate in service line (gas-lift pressure up)
+D-HSL-3,HYDRATE_IN_SERVICE_LINE,31,3640,0.10864279537998411,0.45,Hydrate in service line (gas-lift flow down while injecting)
+D-INST-1,FLOW_INSTABILITY,14,1921,0.5,0.6,Flow instability (small swings at subsea tree)
+D-INST-2,FLOW_INSTABILITY,14,1637,0.5,0.75,Flow instability (small swings at tree and choke)
+D-INST-3,FLOW_INSTABILITY,46,15450,0.2608695652173913,0.35,Flow instability (small swings before choke)
+D-PL-1,RAPID_PRODUCTIVITY_LOSS,14,3144,0.4270186335403726,0.7,Rapid productivity loss (annulus and subsea pressures fall)
+D-PL-2,RAPID_PRODUCTIVITY_LOSS,6,495,0.5,0.6,"Rapid productivity loss (pressures and temperature falling, no blockage)"
+D-QR-1,QUICK_RESTRICTION_IN_PCK,2,9,0.0,0.85,Quick restriction in PCK (choke closing + pressure up before choke)
+D-QR-2,QUICK_RESTRICTION_IN_PCK,7,324,0.0,0.7,Quick restriction in PCK (sudden rise before the choke)
+D-QR-3,QUICK_RESTRICTION_IN_PCK,28,1230,0.1130952380952381,0.4,"Quick restriction in PCK (subsea pressure up, no blockage elsewhere)"
+D-SC-1,SCALING_IN_PCK,18,1119,0.1111111111111111,0.7,"Scaling in PCK (restriction at choke, choke not moved)"
+D-SC-2,SCALING_IN_PCK,16,381,0.1875,0.6,"Scaling in PCK (pressure before choke up, outlet cooler, no sudden change)"
+D-SC-3,SCALING_IN_PCK,29,1332,0.10344827586206896,0.5,Scaling in PCK (slow restriction at choke)
+D-SC-4,SCALING_IN_PCK,46,4360,0.11648244039548387,0.45,Scaling in PCK (pressure before choke above normal)
+D-SC-5,SCALING_IN_PCK,29,1962,0.1556798897263405,0.65,Scaling in PCK (slow pressure build-up before the choke)
+D-SC-6,SCALING_IN_PCK,10,66,0.2,0.75,"Scaling in PCK (slow build-up before choke, outlet cooling slowly)"
+D-SLUG-1,SEVERE_SLUGGING,17,3668,0.7647058823529411,0.9,Severe slugging (large swings along the circuit)
+D-SLUG-2,SEVERE_SLUGGING,21,4099,0.6190476190476191,0.7,Severe slugging (large swings at subsea tree)
+D-SLUG-3,SEVERE_SLUGGING,18,4181,0.7222222222222222,0.7,Severe slugging (large swings before choke and in temperature)
+D-SLUG-5,SEVERE_SLUGGING,17,3006,0.8235294117647058,0.5,Severe slugging (large swings in annulus and gas lift)

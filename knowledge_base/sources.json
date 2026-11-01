@@ -1,0 +1,62 @@
+[
+  {
+    "id": "VARGAS2019",
+    "type": "Doctoral thesis (expert knowledge)",
+    "citation": "Vargas, R.E.V. (2019). Base de dados e benchmarks para prognóstico de anomalias em sistemas de elevação de petróleo. Doctoral thesis, Universidade Federal do Espírito Santo, Sections 2.2–2.4.",
+    "url": "https://github.com/ricardovvargas/3w_dataset"
+  },
+  {
+    "id": "VARGAS2025",
+    "type": "Journal/preprint (dataset paper)",
+    "citation": "Vargas, R.E.V. et al. (2025). 3W Dataset 2.0.0: a realistic and public dataset with rare undesirable real events in oil wells. arXiv:2507.01048.",
+    "url": "https://arxiv.org/abs/2507.01048"
+  },
+  {
+    "id": "PETROBRAS3W",
+    "type": "Dataset documentation",
+    "citation": "Petrobras (2024). 3W Project, dataset v2.0.0 — dataset.ini variable and event definitions. CC BY 4.0.",
+    "url": "https://github.com/petrobras/3W"
+  },
+  {
+    "id": "PETROWIKI_HYD",
+    "type": "Engineering handbook (SPE PetroWiki)",
+    "citation": "Society of Petroleum Engineers. Hydrate plug removal. PetroWiki (from the Petroleum Engineering Handbook).",
+    "url": "https://petrowiki.spe.org/Hydrate_plug_removal"
+  },
+  {
+    "id": "SCHMIDT1985",
+    "type": "Journal paper",
+    "citation": "Schmidt, Z., Doty, D.R., Dutta-Roy, K. (1985). Severe slugging in offshore pipeline riser-pipe systems. SPE Journal 25(1), 27–38.",
+    "url": "https://doi.org/10.2118/12334-PA"
+  },
+  {
+    "id": "GODHAVN2005",
+    "type": "Journal paper",
+    "citation": "Godhavn, J.-M., Fard, M.P., Fuchs, P.H. (2005). New slug control strategies, tuning rules and experimental results. Journal of Process Control 15(5), 547–557.",
+    "url": "https://doi.org/10.1016/j.jprocont.2004.10.003"
+  },
+  {
+    "id": "API14B",
+    "type": "Industry standard",
+    "citation": "American Petroleum Institute. API RP 14B — Design, Installation, Operation, Test, and Redress of Subsurface Safety Valve Systems.",
+    "url": "https://www.api.org"
+  },
+  {
+    "id": "PHYSICS",
+    "type": "First principles (flow physics)",
+    "citation": "Basic flow physics: a restriction in a flow path raises pressure upstream of it and lowers pressure downstream of it; reduced flow lets fluid cool toward sea temperature.",
+    "url": ""
+  },
+  {
+    "id": "DATA_DEV",
+    "type": "Knowledge acquired from data (development set)",
+    "citation": "WellSense analysis of the 125 development instances (Notebook 2, Section 3): symptom frequencies after fault onset vs normal operation.",
+    "url": ""
+  },
+  {
+    "id": "SHORTLIFFE1975",
+    "type": "Journal paper (inference method)",
+    "citation": "Shortliffe, E.H., Buchanan, B.G. (1975). A model of inexact reasoning in medicine. Mathematical Biosciences 23(3–4), 351–379.",
+    "url": "https://doi.org/10.1016/0025-5564(75)90047-4"
+  }
+]

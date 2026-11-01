@@ -1,0 +1,23 @@
+{
+  "key_sensors": [
+    "p_pdg",
+    "p_tpt",
+    "p_mon_ckp",
+    "t_tpt",
+    "t_jus_ckp",
+    "p_jus_ckgl",
+    "qgl",
+    "p_anular"
+  ],
+  "min_key_sensors": 2,
+  "fact_belief_threshold": 0.2,
+  "alarm_threshold": 0.6,
+  "alarm_persistence_min": 5,
+  "confirm_threshold": 0.8,
+  "ask_threshold": 0.3,
+  "trust": {
+    "OK": 1.0,
+    "INTERP": 0.8,
+    "FROZEN": 0.2
+  }
+}

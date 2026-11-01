@@ -1,0 +1,38 @@
+[
+  {
+    "id": "SC-HYD-ONESIDE",
+    "text": "Never depressurize a hydrate plug from one side only — a pressure difference across a released plug turns it into a projectile that can rupture the line.",
+    "sources": [
+      "PETROWIKI_HYD"
+    ]
+  },
+  {
+    "id": "SC-HYD-HEAT",
+    "text": "Never heat the middle of a hydrate plug — released gas can be trapped and rupture the pipe.",
+    "sources": [
+      "PETROWIKI_HYD"
+    ]
+  },
+  {
+    "id": "SC-DHSV-EQUALIZE",
+    "text": "Never force a closed DHSV open against a pressure difference — equalize pressure across the valve first, then reopen through its control system.",
+    "sources": [
+      "API14B"
+    ]
+  },
+  {
+    "id": "SC-SLUG-IGNORE",
+    "text": "Do not keep producing through sustained severe slugging without mitigation — it stresses and can damage well and plant equipment.",
+    "sources": [
+      "VARGAS2019",
+      "SCHMIDT1985"
+    ]
+  },
+  {
+    "id": "SC-SENSOR",
+    "text": "Do not base a well-integrity decision on a sensor flagged as frozen or failed.",
+    "sources": [
+      "VARGAS2019"
+    ]
+  }
+]

@@ -1,0 +1,481 @@
+[
+  {
+    "id": "A-DHSV-1",
+    "fault": "SPURIOUS_CLOSURE_OF_DHSV",
+    "text": "Equalize pressure across the DHSV, then reopen it through its hydraulic control line (corrective operating procedure).",
+    "safety_risk": 2,
+    "production_loss": 1,
+    "cost": 1,
+    "effectiveness": 5,
+    "why": "Restores production quickly without a rig; the thesis notes timely detection allows reopening by corrective procedures.",
+    "sources": [
+      "VARGAS2019",
+      "API14B"
+    ],
+    "violates": null,
+    "not_when": null
+  },
+  {
+    "id": "A-DHSV-2",
+    "fault": "SPURIOUS_CLOSURE_OF_DHSV",
+    "text": "Keep the well closed and schedule a DHSV inspection / workover.",
+    "safety_risk": 1,
+    "production_loss": 5,
+    "cost": 5,
+    "effectiveness": 4,
+    "why": "Safest for the well barrier but loses production for days and may need a rig (> US$500k/day).",
+    "sources": [
+      "VARGAS2019"
+    ],
+    "violates": null,
+    "not_when": null
+  },
+  {
+    "id": "A-DHSV-3",
+    "fault": "SPURIOUS_CLOSURE_OF_DHSV",
+    "text": "Force the DHSV open by raising control-line pressure without equalizing.",
+    "safety_risk": 5,
+    "production_loss": 1,
+    "cost": 1,
+    "effectiveness": 3,
+    "why": "Fast, but can damage the valve and compromise a safety barrier.",
+    "sources": [
+      "API14B"
+    ],
+    "violates": "SC-DHSV-EQUALIZE",
+    "not_when": null
+  },
+  {
+    "id": "A-BSW-1",
+    "fault": "ABRUPT_INCREASE_OF_BSW",
+    "text": "Confirm with a fluid sample, then adjust choke / gas-lift to the new operating point.",
+    "safety_risk": 1,
+    "production_loss": 2,
+    "cost": 1,
+    "effectiveness": 3,
+    "why": "Cheap and quick; keeps the well flowing with the heavier fluid.",
+    "sources": [
+      "VARGAS2019"
+    ],
+    "violates": null,
+    "not_when": null
+  },
+  {
+    "id": "A-BSW-2",
+    "fault": "ABRUPT_INCREASE_OF_BSW",
+    "text": "Inform the reservoir team; review water injection and plan water shut-off.",
+    "safety_risk": 1,
+    "production_loss": 3,
+    "cost": 4,
+    "effectiveness": 4,
+    "why": "Tackles the cause (water breakthrough) but takes time and money.",
+    "sources": [
+      "VARGAS2019"
+    ],
+    "violates": null,
+    "not_when": null
+  },
+  {
+    "id": "A-BSW-3",
+    "fault": "ABRUPT_INCREASE_OF_BSW",
+    "text": "Continue unchanged and only monitor.",
+    "safety_risk": 2,
+    "production_loss": 4,
+    "cost": 1,
+    "effectiveness": 1,
+    "why": "No cost now, but flow-assurance and processing problems may grow.",
+    "sources": [
+      "VARGAS2019"
+    ],
+    "violates": null,
+    "not_when": null
+  },
+  {
+    "id": "A-SLUG-1",
+    "fault": "SEVERE_SLUGGING",
+    "text": "Choke back the production choke to stabilise the flow.",
+    "safety_risk": 1,
+    "production_loss": 3,
+    "cost": 1,
+    "effectiveness": 4,
+    "why": "Classic mitigation: more back-pressure suppresses the slug cycle, at the price of some production.",
+    "sources": [
+      "SCHMIDT1985"
+    ],
+    "violates": null,
+    "not_when": null
+  },
+  {
+    "id": "A-SLUG-2",
+    "fault": "SEVERE_SLUGGING",
+    "text": "Increase gas-lift injection to lighten the riser column.",
+    "safety_risk": 2,
+    "production_loss": 2,
+    "cost": 2,
+    "effectiveness": 3,
+    "why": "Keeps more production but uses more gas and may not remove slugging.",
+    "sources": [
+      "SCHMIDT1985"
+    ],
+    "violates": null,
+    "not_when": null
+  },
+  {
+    "id": "A-SLUG-3",
+    "fault": "SEVERE_SLUGGING",
+    "text": "Switch on active (feedback) slug control on the production choke.",
+    "safety_risk": 1,
+    "production_loss": 1,
+    "cost": 3,
+    "effectiveness": 5,
+    "why": "Automatic choke control removes slugging with little production loss.",
+    "sources": [
+      "GODHAVN2005"
+    ],
+    "violates": null,
+    "not_when": null
+  },
+  {
+    "id": "A-SLUG-4",
+    "fault": "SEVERE_SLUGGING",
+    "text": "Ignore it and keep producing at full rate.",
+    "safety_risk": 4,
+    "production_loss": 1,
+    "cost": 1,
+    "effectiveness": 1,
+    "why": "No production loss now, but repeated slugs stress and can damage equipment.",
+    "sources": [
+      "VARGAS2019"
+    ],
+    "violates": "SC-SLUG-IGNORE",
+    "not_when": null
+  },
+  {
+    "id": "A-INST-1",
+    "fault": "FLOW_INSTABILITY",
+    "text": "Watch closely and make a small choke adjustment to restore stable flow.",
+    "safety_risk": 1,
+    "production_loss": 2,
+    "cost": 1,
+    "effectiveness": 3,
+    "why": "Instability can evolve into severe slugging, so act early but gently.",
+    "sources": [
+      "VARGAS2019"
+    ],
+    "violates": null,
+    "not_when": null
+  },
+  {
+    "id": "A-INST-2",
+    "fault": "FLOW_INSTABILITY",
+    "text": "Adjust the gas-lift rate to a more stable operating point.",
+    "safety_risk": 1,
+    "production_loss": 2,
+    "cost": 1,
+    "effectiveness": 3,
+    "why": "Changes the gas–liquid balance that drives the disturbances.",
+    "sources": [
+      "VARGAS2019"
+    ],
+    "violates": null,
+    "not_when": null
+  },
+  {
+    "id": "A-PL-1",
+    "fault": "RAPID_PRODUCTIVITY_LOSS",
+    "text": "Change the operating point (open choke / increase gas lift) to keep natural flow.",
+    "safety_risk": 2,
+    "production_loss": 1,
+    "cost": 1,
+    "effectiveness": 4,
+    "why": "The thesis: early detection lets operators change the operating point before flow is lost.",
+    "sources": [
+      "VARGAS2019"
+    ],
+    "violates": null,
+    "not_when": {
+      "fact": "FLOW",
+      "is": "STOPPING",
+      "reason": "Natural flow is already being lost; changing the operating point is no longer enough on its own."
+    }
+  },
+  {
+    "id": "A-PL-2",
+    "fault": "RAPID_PRODUCTIVITY_LOSS",
+    "text": "Run a well test and update the reservoir model.",
+    "safety_risk": 1,
+    "production_loss": 3,
+    "cost": 2,
+    "effectiveness": 3,
+    "why": "Confirms the cause before spending on interventions.",
+    "sources": [
+      "VARGAS2019"
+    ],
+    "violates": null,
+    "not_when": null
+  },
+  {
+    "id": "A-PL-3",
+    "fault": "RAPID_PRODUCTIVITY_LOSS",
+    "text": "Plan a stimulation or artificial-lift intervention.",
+    "safety_risk": 3,
+    "production_loss": 2,
+    "cost": 5,
+    "effectiveness": 4,
+    "why": "Long-term fix; needs intervention vessel or rig.",
+    "sources": [
+      "VARGAS2019"
+    ],
+    "violates": null,
+    "not_when": null
+  },
+  {
+    "id": "A-QR-1",
+    "fault": "QUICK_RESTRICTION_IN_PCK",
+    "text": "Check the production choke and restore it to its set-point.",
+    "safety_risk": 1,
+    "production_loss": 1,
+    "cost": 1,
+    "effectiveness": 5,
+    "why": "The thesis: the choke is usually manual, so unwanted closures can be undone quickly.",
+    "sources": [
+      "VARGAS2019"
+    ],
+    "violates": null,
+    "not_when": null
+  },
+  {
+    "id": "A-QR-2",
+    "fault": "QUICK_RESTRICTION_IN_PCK",
+    "text": "Inspect the choke actuator / control system for faults.",
+    "safety_risk": 1,
+    "production_loss": 2,
+    "cost": 2,
+    "effectiveness": 4,
+    "why": "Prevents the restriction from happening again.",
+    "sources": [
+      "VARGAS2019"
+    ],
+    "violates": null,
+    "not_when": null
+  },
+  {
+    "id": "A-SC-1",
+    "fault": "SCALING_IN_PCK",
+    "text": "Inject scale inhibitor upstream of the choke.",
+    "safety_risk": 2,
+    "production_loss": 2,
+    "cost": 2,
+    "effectiveness": 4,
+    "why": "The thesis names scale-inhibitor injection as the appropriate action.",
+    "sources": [
+      "VARGAS2019"
+    ],
+    "violates": null,
+    "not_when": null
+  },
+  {
+    "id": "A-SC-2",
+    "fault": "SCALING_IN_PCK",
+    "text": "Dissolve the deposits with a chemical (acid) wash.",
+    "safety_risk": 3,
+    "production_loss": 3,
+    "cost": 3,
+    "effectiveness": 4,
+    "why": "Removes existing scale; chemicals need careful handling.",
+    "sources": [
+      "VARGAS2019"
+    ],
+    "violates": null,
+    "not_when": null
+  },
+  {
+    "id": "A-SC-3",
+    "fault": "SCALING_IN_PCK",
+    "text": "Shut in and clean or replace the choke trim.",
+    "safety_risk": 2,
+    "production_loss": 4,
+    "cost": 3,
+    "effectiveness": 5,
+    "why": "Definitive fix, but needs a short shutdown.",
+    "sources": [
+      "VARGAS2019"
+    ],
+    "violates": null,
+    "not_when": null
+  },
+  {
+    "id": "A-SC-4",
+    "fault": "SCALING_IN_PCK",
+    "text": "Open the choke further to compensate.",
+    "safety_risk": 2,
+    "production_loss": 1,
+    "cost": 1,
+    "effectiveness": 2,
+    "why": "Keeps production short-term while deposits keep growing.",
+    "sources": [
+      "VARGAS2019"
+    ],
+    "violates": null,
+    "not_when": {
+      "fact": "CHOKE_OPENING",
+      "is": "FULLY_OPEN",
+      "reason": "The choke is already fully open."
+    }
+  },
+  {
+    "id": "A-HPL-1",
+    "fault": "HYDRATE_IN_PRODUCTION_LINE",
+    "text": "Depressurize the line slowly from BOTH sides of the plug, then let the hydrate dissociate.",
+    "safety_risk": 2,
+    "production_loss": 4,
+    "cost": 2,
+    "effectiveness": 4,
+    "why": "PetroWiki: two-sided depressurization is the recommended, safer method; it can take days.",
+    "sources": [
+      "PETROWIKI_HYD"
+    ],
+    "violates": null,
+    "not_when": null
+  },
+  {
+    "id": "A-HPL-2",
+    "fault": "HYDRATE_IN_PRODUCTION_LINE",
+    "text": "Bring coiled tubing to place inhibitor (MEG/methanol) at the plug face.",
+    "safety_risk": 3,
+    "production_loss": 3,
+    "cost": 5,
+    "effectiveness": 4,
+    "why": "Works where inhibitor cannot reach the plug otherwise; needs a vessel (> US$500k/day).",
+    "sources": [
+      "PETROWIKI_HYD",
+      "VARGAS2019"
+    ],
+    "violates": null,
+    "not_when": null
+  },
+  {
+    "id": "A-HPL-3",
+    "fault": "HYDRATE_IN_PRODUCTION_LINE",
+    "text": "Increase hydrate-inhibitor dosing while the line still flows.",
+    "safety_risk": 1,
+    "production_loss": 2,
+    "cost": 2,
+    "effectiveness": 3,
+    "why": "Best in the early stage, before the line is fully blocked.",
+    "sources": [
+      "PETROWIKI_HYD"
+    ],
+    "violates": null,
+    "not_when": {
+      "fact": "FLOW",
+      "is": "STOPPING",
+      "reason": "Flow has stopped, so the plug has formed; PetroWiki: inhibitor injection is usually ineffective because it cannot reach the plug face."
+    }
+  },
+  {
+    "id": "A-HPL-4",
+    "fault": "HYDRATE_IN_PRODUCTION_LINE",
+    "text": "Depressurize from one side only to clear the plug faster.",
+    "safety_risk": 5,
+    "production_loss": 2,
+    "cost": 1,
+    "effectiveness": 3,
+    "why": "Faster, but the plug can shoot down the line like a projectile.",
+    "sources": [
+      "PETROWIKI_HYD"
+    ],
+    "violates": "SC-HYD-ONESIDE",
+    "not_when": null
+  },
+  {
+    "id": "A-HPL-5",
+    "fault": "HYDRATE_IN_PRODUCTION_LINE",
+    "text": "Heat the line at the middle of the plug.",
+    "safety_risk": 5,
+    "production_loss": 2,
+    "cost": 2,
+    "effectiveness": 3,
+    "why": "Gas released inside the plug can be trapped and burst the pipe.",
+    "sources": [
+      "PETROWIKI_HYD"
+    ],
+    "violates": "SC-HYD-HEAT",
+    "not_when": null
+  },
+  {
+    "id": "A-HSL-1",
+    "fault": "HYDRATE_IN_SERVICE_LINE",
+    "text": "Depressurize the service line from both sides and inject inhibitor.",
+    "safety_risk": 2,
+    "production_loss": 3,
+    "cost": 2,
+    "effectiveness": 4,
+    "why": "Same principle as for the production line: two-sided depressurization is safer.",
+    "sources": [
+      "PETROWIKI_HYD"
+    ],
+    "violates": null,
+    "not_when": null
+  },
+  {
+    "id": "A-HSL-2",
+    "fault": "HYDRATE_IN_SERVICE_LINE",
+    "text": "Stop gas lift through the blocked line and produce without it meanwhile.",
+    "safety_risk": 1,
+    "production_loss": 3,
+    "cost": 1,
+    "effectiveness": 3,
+    "why": "Avoids pushing gas against the plug; production may fall.",
+    "sources": [
+      "PETROWIKI_HYD"
+    ],
+    "violates": null,
+    "not_when": null
+  },
+  {
+    "id": "A-HSL-3",
+    "fault": "HYDRATE_IN_SERVICE_LINE",
+    "text": "Raise gas-lift pressure to blow the plug through.",
+    "safety_risk": 5,
+    "production_loss": 2,
+    "cost": 1,
+    "effectiveness": 2,
+    "why": "Builds a pressure difference across the plug — projectile risk, and can compact the plug.",
+    "sources": [
+      "PETROWIKI_HYD"
+    ],
+    "violates": "SC-HYD-ONESIDE",
+    "not_when": null
+  },
+  {
+    "id": "A-SENS-PDG",
+    "fault": "SENSOR:PDG",
+    "text": "Schedule a downhole-gauge check; until fixed, base decisions on TPT and choke sensors.",
+    "safety_risk": 1,
+    "production_loss": 1,
+    "cost": 2,
+    "effectiveness": 3,
+    "why": "The thesis notes PDGs commonly fail or freeze.",
+    "sources": [
+      "VARGAS2019"
+    ],
+    "violates": null,
+    "not_when": null
+  },
+  {
+    "id": "A-SENS-TPT",
+    "fault": "SENSOR:TPT",
+    "text": "Schedule a subsea transducer (TPT) check.",
+    "safety_risk": 1,
+    "production_loss": 1,
+    "cost": 3,
+    "effectiveness": 3,
+    "why": "TPT is one of the most important sensors for diagnosis.",
+    "sources": [
+      "VARGAS2019"
+    ],
+    "violates": null,
+    "not_when": null
+  }
+]

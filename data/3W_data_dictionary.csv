@@ -1,0 +1,35 @@
+column,description,unit
+instance_id,Unique ID of the real event instance (well + start time of its first observation),-
+well_id,Anonymised Petrobras well ID,-
+event_type,Event type code (0 = normal; 1-9 = undesirable events),-
+event_name,Event type name,-
+timestamp,Instant of the observation (raw reading kept for the first second of each minute),UTC-like local time
+ABER-CKGL,Opening of the GLCK (gas lift choke),%
+ABER-CKP,Opening of the PCK (production choke),%
+ESTADO-DHSV,State of the DHSV (downhole safety valve),"0 = closed, 0.5 = intermediate, 1 = open"
+ESTADO-M1,State of the PMV (production master valve),"0, 0.5 or 1"
+ESTADO-M2,State of the AMV (annulus master valve),"0, 0.5 or 1"
+ESTADO-PXO,State of the PXO (pig-crossover) valve,"0, 0.5 or 1"
+ESTADO-SDV-GL,State of the gas lift SDV (shutdown valve),"0, 0.5 or 1"
+ESTADO-SDV-P,State of the production SDV (shutdown valve),"0, 0.5 or 1"
+ESTADO-W1,State of the PWV (production wing valve),"0, 0.5 or 1"
+ESTADO-W2,State of the AWV (annulus wing valve),"0, 0.5 or 1"
+ESTADO-XO,State of the XO (crossover) valve,"0, 0.5 or 1"
+P-ANULAR,Pressure in the well annulus,Pa
+P-JUS-BS,Downstream pressure of the SP (service pump),Pa
+P-JUS-CKGL,Downstream pressure of the GLCK (gas lift choke),Pa
+P-JUS-CKP,Downstream pressure of the PCK (production choke),Pa
+P-MON-CKGL,Upstream pressure of the GLCK (gas lift choke),Pa
+P-MON-CKP,Upstream pressure of the PCK (production choke),Pa
+P-MON-SDV-P,Upstream pressure of the production SDV (shutdown valve),Pa
+P-PDG,Downhole pressure at the PDG (permanent downhole gauge),Pa
+PT-P,Subsea Xmas-tree pressure downstream of the PWV in the production line,Pa
+P-TPT,Subsea Xmas-tree pressure at the TPT (temperature and pressure transducer),Pa
+QBS,Flow rate at the SP (service pump),m3/s
+QGL,Gas lift flow rate,m3/s
+T-JUS-CKP,Downstream temperature of the PCK (production choke),degC
+T-MON-CKP,Upstream temperature of the PCK (production choke),degC
+T-PDG,Downhole temperature at the PDG (permanent downhole gauge),degC
+T-TPT,Subsea Xmas-tree temperature at the TPT,degC
+class,"Label of the observation: 0 = normal, N = steady state of event N, 100+N = transient (developing) phase of event N, empty = unlabelled",-
+state,Well operational status code (as provided by Petrobras),-
